@@ -1,4 +1,4 @@
-# My Solutions — Matrices and Basic Operations
+# My Solutions — 
 
 This workbook records the solutions, reasoning, and checks for each exercise.
 
