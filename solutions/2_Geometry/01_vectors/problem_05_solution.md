@@ -1,15 +1,48 @@
-## Question
+## Exercise 5 — Angle Between Vectors
 
-For $u=(1,1,0)$ and $v=(1,0,1)$, predict the angle type from the dot product, compute the angle, and compare.
+### Problem Statement
+For $u=(1,1,0)$ and $v=(1,0,1)$, use the sign of the dot product to predict the type of angle, compute the angle, and compare it with the prediction.
 
-## Solution
+### Objective
+Use the dot product first for qualitative information and then for the exact angle.
 
-Since
+### Concepts and Formulas
+- For nonzero vectors, $u\cdot v=\|u\|\|v\|\cos\theta$.
+- A positive dot product means the angle is acute; a zero dot product means it is right; a negative dot product means it is obtuse.
 
-$$u\cdot v=1>0,$$
+### Step-by-Step Solution
 
-the angle should be acute. Both norms equal $\sqrt2$, so
+#### Step 1 — Predict from the dot product's sign
 
-$$\cos\theta=\frac{u\cdot v}{\|u\|\|v\|}=\frac{1}{2}.$$
+$$
+u\cdot v=1(1)+1(0)+0(1)=1
+$$
 
-Therefore $\theta=\arccos(1/2)=\pi/3=60^\circ$. This is acute, agreeing with the qualitative prediction.
+The dot product is positive, so the angle is acute.
+
+#### Step 2 — Calculate the angle
+
+$$
+\|u\|=\sqrt{2},\qquad \|v\|=\sqrt{2}
+$$
+
+Therefore,
+
+$$
+\cos\theta=\frac{u\cdot v}{\|u\|\|v\|}=\frac{1}{\sqrt{2}\sqrt{2}}=\frac{1}{2}
+$$
+
+The angle whose cosine is $1/2$ is $\theta=60^\circ=\pi/3$ radians.
+
+### Verification
+$60^\circ$ is acute, consistent with the positive dot product.
+
+### Final Answer
+
+$$
+\theta=60^\circ=\frac{\pi}{3}
+$$
+
+### Key Takeaways
+- The dot product's sign predicts whether an angle is acute, right, or obtuse.
+- The normalized dot product gives the cosine of the angle.

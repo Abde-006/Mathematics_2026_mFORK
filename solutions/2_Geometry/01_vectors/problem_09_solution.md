@@ -1,21 +1,50 @@
-## Question
+## Exercise 9 — Cross Product as a Perpendicular Direction
 
-For $u=(1,2,0)$ and $v=(0,1,3)$, compute $u\times v$, verify perpendicularity to both vectors, and compare with $v\times u$.
+### Problem Statement
+For $u=(1,2,0)$ and $v=(0,1,3)$, compute $u\times v$. Use dot products to verify perpendicularity to both vectors, compute $v\times u$, and compare the results.
 
-## Solution
+### Objective
+Compute a cross product, verify its perpendicularity, and observe the effect of reversing its order.
 
-Expanding the determinant gives
+### Concepts and Formulas
+- In $\mathbb R^3$, the cross product is perpendicular to both input vectors.
+- Reversing the order changes its sign: $v\times u=-(u\times v)$.
 
-$$u\times v=(2\cdot3-0\cdot1,\;0\cdot0-1\cdot3,\;1\cdot1-2\cdot0)=(6,-3,1).$$
+### Step-by-Step Solution
 
-The dot-product checks are
+#### Step 1 — Compute the cross product
 
-$$(6,-3,1)\cdot(1,2,0)=6-6=0,$$
+$$
+u\times v=(2\cdot3-0\cdot1,\;0\cdot0-1\cdot3,\;1\cdot1-2\cdot0)=(6,-3,1)
+$$
 
-$$(6,-3,1)\cdot(0,1,3)=-3+3=0.$$
+#### Step 2 — Check it is perpendicular to each vector
 
-Thus the cross product is perpendicular to both original vectors. Reversing the order gives
+$$
+(u\times v)\cdot u=(6,-3,1)\cdot(1,2,0)=6-6+0=0
+$$
 
-$$v\times u=(-6,3,-1)=-(u\times v),$$
+$$
+(u\times v)\cdot v=(6,-3,1)\cdot(0,1,3)=0-3+3=0
+$$
 
-so the perpendicular direction reverses orientation while keeping its magnitude.
+#### Step 3 — Reverse the order
+
+$$
+v\times u=(-6,3,-1)=-(6,-3,1)=-(u\times v)
+$$
+
+### Verification
+Both dot products are zero, confirming perpendicularity. The reversed cross product is the negative of the original.
+
+### Final Answer
+
+$$
+u\times v=(6,-3,1),\qquad v\times u=(-6,3,-1)
+$$
+
+The cross product gives a perpendicular direction, and reversing the inputs reverses its orientation.
+
+### Key Takeaways
+- Dot products provide a direct check that a cross product is perpendicular.
+- The cross product is anti-commutative: reversing the inputs changes the sign.
