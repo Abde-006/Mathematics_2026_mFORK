@@ -3,10 +3,15 @@
 ## Problem Statement
 
 The scaling
-\[
-S=\begin{pmatrix}2&0\\0&\frac12\end{pmatrix}
-\]
-doubles the first coordinate and halves the second. Find \(S^{-1}\), describe it geometrically, and check the pair of transformations on a vector.
+
+$$
+S=\begin{pmatrix}
+2&0 \\
+0&\frac12 \\
+\end{pmatrix}
+$$
+
+doubles the first coordinate and halves the second. Find $S^{-1}$, describe it geometrically, and check the pair of transformations on a vector.
 
 ## Objective
 
@@ -20,39 +25,70 @@ For a diagonal matrix with nonzero diagonal entries, the inverse is diagonal wit
 
 ### Step 1 — Reverse each coordinate scaling
 
-To undo multiplication of the first coordinate by \(2\), multiply it by \(1/2\). To undo multiplication of the second coordinate by \(1/2\), multiply it by \(2\). Hence
-\[
-S^{-1}=\begin{pmatrix}\frac12&0\\0&2\end{pmatrix}.
-\]
+To undo multiplication of the first coordinate by $2$, multiply it by $1/2$. To undo multiplication of the second coordinate by $1/2$, multiply it by $2$. Hence
+
+$$
+S^{-1}=\begin{pmatrix}
+\frac12&0 \\
+0&2 \\
+\end{pmatrix}.
+$$
 
 ### Step 2 — Check the inverse matrices
 
-\[
+$$
 SS^{-1}
-=\begin{pmatrix}2&0\\0&\frac12\end{pmatrix}
-\begin{pmatrix}\frac12&0\\0&2\end{pmatrix}
+=\begin{pmatrix}
+2&0 \\
+0&\frac12 \\
+\end{pmatrix}
+\begin{pmatrix}
+\frac12&0 \\
+0&2 \\
+\end{pmatrix}
 =I_2.
-\]
-The reverse product is also \(I_2\), since both matrices are diagonal.
+$$
+
+The reverse product is also $I_2$, since both matrices are diagonal.
 
 ### Step 3 — Check the action on a vector
 
-For \(v=\begin{pmatrix}2\\4\end{pmatrix}\),
-\[
-Sv=\begin{pmatrix}4\\2\end{pmatrix},
+For
+
+$$
+v=\begin{pmatrix}
+2 \\
+4 \\
+\end{pmatrix}
+$$
+
+,
+
+$$
+Sv=\begin{pmatrix}
+4 \\
+2 \\
+\end{pmatrix},
 \qquad
-S^{-1}(Sv)=\begin{pmatrix}2\\4\end{pmatrix}=v.
-\]
+S^{-1}(Sv)=\begin{pmatrix}
+2 \\
+4 \\
+\end{pmatrix}=v.
+$$
 
 ## Verification
 
-The vector returns to its original coordinates after applying \(S\) and then \(S^{-1}\).
+The vector returns to its original coordinates after applying $S$ and then $S^{-1}$.
 
 ## Final Answer
 
-\[
-\boxed{S^{-1}=\begin{pmatrix}\frac12&0\\0&2\end{pmatrix}}.
-\]
+$$
+S^{-1}=\begin{pmatrix}
+\frac12&0 \\
+0&2 \\
+\end{pmatrix}.
+$$
+
 Geometrically, it halves the first coordinate and doubles the second.
 
 ## Key Takeaways
