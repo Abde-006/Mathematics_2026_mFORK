@@ -3,12 +3,14 @@
 ## Problem Statement
 
 Solve or show that the system is inconsistent:
-\[
+
+$$
 \begin{cases}
-x+2y=3,\\
-2x+4y=7.
+x+2y=3, \\
+2x+4y=7. \\
 \end{cases}
-\]
+$$
+
 Show the contradiction after elimination and interpret it in terms of the equations.
 
 ## Objective
@@ -17,47 +19,49 @@ Recognize that a system has no solution when elimination produces a false equali
 
 ## Concepts and Formulas
 
-Row operations preserve the solution set. A row \([0\ 0\mid c]\) for \(c\ne0\) represents \(0=c\), which is impossible.
+Row operations preserve the solution set. A row $[0\ 0\mid c]$ for $c\ne0$ represents $0=c$, which is impossible.
 
 ## Step-by-Step Solution
 
 ### Step 1 — Form the augmented matrix
 
-\[
-\left[\begin{array}{cc|c}
-1&2&3\\
-2&4&7
-\end{array}\right].
-\]
+$$
+\begin{pmatrix}
+1 & 2 & \mid & 3 \\
+2 & 4 & \mid & 7 \\
+\end{pmatrix}.
+$$
 
 ### Step 2 — Eliminate the first variable
 
-Apply \(R_2\leftarrow R_2-2R_1\):
-\[
-\left[\begin{array}{cc|c}
-1&2&3\\
-0&0&1
-\end{array}\right].
-\]
+Apply $R_2\leftarrow R_2-2R_1$:
+
+$$
+\begin{pmatrix}
+1 & 2 & \mid & 3 \\
+0 & 0 & \mid & 1 \\
+\end{pmatrix}.
+$$
+
 The second row says
-\[
-0x+0y=1,\quad\text{or}\quad 0=1,
-\]
+
+$$
+0x+0y=1,\quad\mathrm{or}\quad 0=1,
+$$
+
 which is a contradiction.
 
 ### Step 3 — Interpret the contradiction
 
-The left side of the second equation is twice the first equation's left side, but its right side is \(7\), not twice \(3\), which would be \(6\). The equations demand incompatible values for the same expression.
+The left side of the second equation is twice the first equation's left side, but its right side is $7$, not twice $3$, which would be $6$. The equations demand incompatible values for the same expression.
 
 ## Verification
 
-If the first equation holds, doubling it forces \(2x+4y=6\); it cannot simultaneously equal \(7\).
+If the first equation holds, doubling it forces $2x+4y=6$; it cannot simultaneously equal $7$.
 
 ## Final Answer
 
-\[
-\boxed{\text{The system is inconsistent and has no solution.}}
-\]
+The contradiction shows that the system is inconsistent and has no solution.
 
 ## Key Takeaways
 
