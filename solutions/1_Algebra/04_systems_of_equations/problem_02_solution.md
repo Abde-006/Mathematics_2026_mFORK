@@ -34,7 +34,7 @@ $$
 
 ### Step 2 — Eliminate $x$ from rows 2 and 3
 
-Apply $R_2\leftarrow R_2-2R_1$ and $R_3\leftarrow R_3-R_1$:
+For row 2, subtract twice row 1: $(2,-1,1\mid3)-2(1,1,1\mid6)=(0,-3,-1\mid-9)$. For row 3, subtract row 1: $(1,2,-1\mid2)-(1,1,1\mid6)=(0,1,-2\mid-4)$.
 
 $$
 \begin{pmatrix}
@@ -44,7 +44,7 @@ $$
 \end{pmatrix}.
 $$
 
-Swap rows 2 and 3, then use $R_3\leftarrow R_3+3R_2$:
+Swap rows 2 and 3 so the second pivot is $1$. Then add three times row 2 to row 3: $(0,-3,-1\mid-9)+3(0,1,-2\mid-4)=(0,0,-7\mid-21)$.
 
 $$
 \begin{pmatrix}
@@ -56,13 +56,17 @@ $$
 
 ### Step 3 — Back-substitute
 
-The last row gives $z=3$. The second row gives
+Divide the last row by $-7$ to get $z=3$. Substitute $z=3$ into the second row:
 
 $$
-y-2(3)=-4\quad\Longrightarrow\quad y=2.
+y-2(3)=-4\quad\Longrightarrow\quad y-6=-4\quad\Longrightarrow\quad y=2.
 $$
 
-The first row gives $x+2+3=6$, so $x=1$.
+Substitute $y=2$ and $z=3$ into the first row:
+
+$$
+x+2+3=6\quad\Longrightarrow\quad x+5=6\quad\Longrightarrow\quad x=1.
+$$
 
 ## Verification
 

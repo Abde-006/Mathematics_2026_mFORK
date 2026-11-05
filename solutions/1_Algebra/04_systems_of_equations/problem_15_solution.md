@@ -45,17 +45,23 @@ Recognize the three possible solution types from the equations' relationships af
 
 ### System 1
 
-Subtract the second equation from the first:
+Subtract the second equation from the first. The resulting equation is
 
 $$
 (x+y)-(x-y)=2-0\quad\Longrightarrow\quad 2y=2,
 $$
 
-so $y=1$. Then $x-y=0$ gives $x=1$. Both variables are determined; there is one solution.
+so dividing by $2$ gives $y=1$. Substitute into $x-y=0$:
+
+$$
+x-1=0\quad\Longrightarrow\quad x=1.
+$$
+
+Both variables are determined; there is one solution.
 
 ### System 2
 
-The second equation is exactly twice the first, so it adds no new constraint. The remaining equation $x+y=2$ has infinitely many solutions, for example
+The second equation is exactly twice the first: $2(x+y)=2(2)$, so it adds no new constraint. Let $y=t$ in the remaining equation $x+y=2$. Then $x=2-t$, giving infinitely many solutions:
 
 $$
 (x,y)=(2-t,t),\qquad t\in\mathbb R.
@@ -63,7 +69,13 @@ $$
 
 ### System 3
 
-Twice the first equation gives $2x+2y=4$, but the second requires $2x+2y=5$. Subtraction produces $0=1$, so the system is inconsistent.
+Twice the first equation gives $2x+2y=4$. Subtract this equation from the second:
+
+$$
+(2x+2y)-(2x+2y)=5-4\quad\Longrightarrow\quad 0=1.
+$$
+
+This contradiction means the system is inconsistent.
 
 ## Verification
 

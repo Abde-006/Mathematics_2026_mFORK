@@ -32,7 +32,7 @@ A diagonal matrix is invertible exactly when every diagonal entry is nonzero. It
 
 ### Step 1 — Classify $D$
 
-The diagonal entries of $D$ are $2,-3,5$, all nonzero. Therefore $D$ is invertible, with
+The diagonal entries of $D$ are $2,-3,5$, all nonzero. Their reciprocals are $\frac12,-\frac13,\frac15$, so the diagonal inverse is
 
 $$
 D^{-1}=\begin{pmatrix}
@@ -43,6 +43,8 @@ D^{-1}=\begin{pmatrix}
 $$
 
 ### Step 2 — Check the product
+
+Multiplying matching diagonal entries gives $1$; all off-diagonal entries remain zero:
 
 $$
 DD^{-1}
@@ -56,7 +58,7 @@ $$
 
 ### Step 3 — Classify $E$
 
-The second diagonal entry of $E$ is zero. Its determinant, the product of the diagonal entries, is zero. Equivalently, $E$ sends this nonzero vector to zero:
+The second diagonal entry of $E$ is zero, so its determinant (the product of the diagonal entries) is $2\cdot0\cdot5=0$. Equivalently, it sends the following nonzero vector to the zero vector:
 
 $$
 E\begin{pmatrix}

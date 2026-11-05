@@ -25,6 +25,8 @@ For a $2\times2$ matrix, invertibility is equivalent to a nonzero determinant. T
 
 ### Step 1 — Compute the determinant
 
+Multiply the diagonal entries and subtract the product of the off-diagonal entries:
+
 $$
 \det A(t)=1\cdot1-t\cdot t=1-t^2=(1-t)(1+t).
 $$
@@ -48,7 +50,7 @@ $$
 
 ### Step 4 — Interpret the excluded values
 
-At $t=1$, both rows are $(1,1)$. At $t=-1$, the rows are $(1,-1)$ and $(-1,1)$, which are negatives. In each case the rows are dependent, and the determinant is zero. The denominator in the inverse formula vanishes because no inverse exists at those values.
+At $t=1$, both rows are $(1,1)$. At $t=-1$, the rows are $(1,-1)$ and $(-1,1)$, which are negatives of each other. In each case the rows are dependent and the determinant is zero. The denominator in the inverse formula is then zero, matching the fact that no inverse exists.
 
 ## Verification
 

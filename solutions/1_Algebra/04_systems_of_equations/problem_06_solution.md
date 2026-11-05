@@ -25,10 +25,10 @@ The second left-hand side is $a(x+y)$. Using the first equation, its value must 
 
 ### Step 1 — Use the first equation in the second
 
-Since $x+y=2$, the left side $ax+ay=a(x+y)=2a$. Therefore the second equation is consistent with the first exactly when
+Subtract $a$ times the first equation from the second. The left side becomes $ax+ay-a(x+y)=0$, and the right side becomes $4-2a$:
 
 $$
-2a=4,\quad\mathrm{so}\quad a=2.
+0=4-2a\quad\Longrightarrow\quad 2a=4\quad\Longrightarrow\quad a=2.
 $$
 
 ### Step 2 — Analyze $a=2$

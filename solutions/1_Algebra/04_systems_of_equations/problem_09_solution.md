@@ -35,11 +35,11 @@ $$
 \quad\Longrightarrow\quad 3y=12,
 $$
 
-so $y=4$.
+Divide both sides by $3$ to get $y=4$.
 
 ### Step 2 — Find $x$
 
-Substitute $y=4$ into $x+y=10$:
+Substitute $y=4$ into the first equation:
 
 $$
 x+4=10\quad\Longrightarrow\quad x=6.

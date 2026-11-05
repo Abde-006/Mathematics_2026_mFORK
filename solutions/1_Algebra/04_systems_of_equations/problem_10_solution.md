@@ -16,7 +16,13 @@ To pass through $(x_0,y_0)$, a polynomial must satisfy $p(x_0)=y_0$. Substitutin
 
 ### Step 1 — Substitute each point
 
-At $x=0$: $c=1$. At $x=1$: $a+b+c=3$. At $x=2$: $4a+2b+c=9$. The resulting system is
+Substitute each input-output pair into $p(x)=ax^2+bx+c$:
+
+- At $(0,1)$: $a(0)^2+b(0)+c=1$, so $c=1$.
+- At $(1,3)$: $a+b+c=3$.
+- At $(2,9)$: $4a+2b+c=9$.
+
+The resulting system is
 
 $$
 \begin{cases}
@@ -28,7 +34,18 @@ $$
 
 ### Step 2 — Solve for the coefficients
 
-From the first equation, $c=1$. The second gives $a+b=2$, and the third gives $4a+2b=8$, or $2a+b=4$. Subtract $a+b=2$ from $2a+b=4$ to get $a=2$. Then $b=0$.
+From the first equation, $c=1$. Substitute it into the second and third equations:
+
+$$
+a+b+1=3\quad\Longrightarrow\quad a+b=2,
+$$
+
+$$
+4a+2b+1=9\quad\Longrightarrow\quad 4a+2b=8
+\quad\Longrightarrow\quad 2a+b=4.
+$$
+
+Subtract $a+b=2$ from $2a+b=4$ to get $a=2$. Substitute into $a+b=2$ to obtain $b=0$.
 
 ### Step 3 — Write the polynomial
 

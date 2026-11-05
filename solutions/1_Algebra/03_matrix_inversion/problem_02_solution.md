@@ -41,6 +41,8 @@ $$
 
 ### Step 1 — Check invertibility
 
+For a $2\times2$ matrix, subtract the product of the off-diagonal entries from the product of the diagonal entries:
+
 $$
 \det(A)=3\cdot4-2\cdot5=12-10=2.
 $$
@@ -64,6 +66,8 @@ $$
 
 ### Step 3 — Verify by multiplication
 
+Multiply each row of $A$ by each column of the proposed inverse:
+
 $$
 AA^{-1}=
 \begin{pmatrix}
@@ -73,6 +77,10 @@ AA^{-1}=
 \begin{pmatrix}
 2&-1 \\
 -\frac52&\frac32 \\
+\end{pmatrix}
+=\begin{pmatrix}
+3(2)+2\left(-\frac52\right)&3(-1)+2\left(\frac32\right) \\
+5(2)+4\left(-\frac52\right)&5(-1)+4\left(\frac32\right) \\
 \end{pmatrix}
 =\begin{pmatrix}
 6-5&-3+3 \\

@@ -31,6 +31,8 @@ $$
 
 ### Step 1 — Compute $(3A)^{-1}$
 
+Multiplying a matrix by $3$ scales its inverse by $\frac13$:
+
 $$
 (3A)^{-1}=\frac13A^{-1}
 =\begin{pmatrix}
@@ -41,7 +43,7 @@ $$
 
 ### Step 2 — Compute $(A^T)^{-1}$
 
-Transpose the known inverse:
+Transpose the known inverse by swapping its rows and columns:
 
 $$
 (A^T)^{-1}=(A^{-1})^T
@@ -64,6 +66,14 @@ $$
 \begin{pmatrix}
 2&-1 \\
 -3&2 \\
+\end{pmatrix}
+=\begin{pmatrix}
+2(2)+(-1)(-3)&2(-1)+(-1)(2) \\
+(-3)(2)+2(-3)&(-3)(-1)+2(2) \\
+\end{pmatrix}
+=\begin{pmatrix}
+4+3&-2-2 \\
+-6-6&3+4 \\
 \end{pmatrix}
 =\begin{pmatrix}
 7&-4 \\

@@ -16,7 +16,7 @@ A matrix $B$ is the inverse of $A$ if $AB=BA=I$. The equation $A^2=I$ means $AA=
 
 ### Step 1 — Prove the statement
 
-Since $A^2=I$, we have $AA=I$. The two factors are both $A$, so also $AA=I$ in the reverse order. Thus $A$ satisfies the defining condition for its own inverse:
+By definition, $A^2=AA$. Since both factors are the same matrix, reversing their order still gives $AA$. Thus $AA=I$ on both sides, which is exactly the defining condition for $A$ to be its own inverse:
 
 $$
 A^{-1}=A.
@@ -36,6 +36,8 @@ $$
 It is different from $I_2$ and $-I_2$.
 
 ### Step 3 — Verify the example
+
+Compute each entry as a row-by-column product:
 
 $$
 A^2=

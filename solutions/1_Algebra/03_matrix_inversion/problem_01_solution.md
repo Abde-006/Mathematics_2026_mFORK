@@ -36,6 +36,8 @@ where $I$ is the identity matrix of the same size. Matrix multiplication is gene
 
 ### Step 1 — Compute $AB$
 
+Each entry is the dot product of a row of $A$ with a column of $B$:
+
 $$
 AB=
 \begin{pmatrix}
@@ -57,6 +59,8 @@ AB=
 $$
 
 ### Step 2 — Compute $BA$
+
+For the reverse product, use the rows of $B$ and the columns of $A$:
 
 $$
 BA=

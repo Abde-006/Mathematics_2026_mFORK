@@ -65,15 +65,26 @@ $$
 ,
 
 $$
-Sv=\begin{pmatrix}
+Sv=
+\begin{pmatrix}
+2(2)+0(4) \\
+0(2)+\frac12(4) \\
+\end{pmatrix}
+=\begin{pmatrix}
 4 \\
 2 \\
 \end{pmatrix},
 \qquad
-S^{-1}(Sv)=\begin{pmatrix}
+S^{-1}(Sv)=
+\begin{pmatrix}
+\frac12(4)+0(2) \\
+0(4)+2(2) \\
+\end{pmatrix}
+=\begin{pmatrix}
 2 \\
 4 \\
-\end{pmatrix}=v.
+\end{pmatrix}
+=v.
 $$
 
 ## Verification

@@ -22,7 +22,7 @@ Choose a solution strategy based on matrix structure, whether an inverse is avai
 
 ### Case 1 — Use back-substitution
 
-The second equation directly gives $4y=8$, hence $y=2$. Substitute into the first:
+The second equation directly gives $4y=8$. Divide both sides by $4$ to get $y=2$. Substitute into the first:
 
 $$
 2x-2=3\quad\Longrightarrow\quad 2x=5\quad\Longrightarrow\quad x=\frac52.

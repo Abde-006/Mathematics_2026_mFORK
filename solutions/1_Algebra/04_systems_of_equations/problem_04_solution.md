@@ -26,7 +26,7 @@ A free variable is a variable without a pivot after elimination. Assigning it a 
 
 ### Step 1 — Eliminate redundant information
 
-The second equation is exactly twice the first. Subtract $2$ times row 1 from row 2 in the augmented matrix:
+The second equation is exactly twice the first. Subtract $2$ times row 1 from row 2. The new row is $(2,2,2\mid4)-2(1,1,1\mid2)=(0,0,0\mid0)$:
 
 $$
 \begin{pmatrix}
@@ -36,7 +36,7 @@ $$
 \end{pmatrix}.
 $$
 
-Now apply $R_3\leftarrow R_3-R_1$:
+Now subtract row 1 from row 3: $(1,-1,1\mid0)-(1,1,1\mid2)=(0,-2,0\mid-2)$:
 
 $$
 \begin{pmatrix}
@@ -46,14 +46,14 @@ $$
 \end{pmatrix}.
 $$
 
-The third row gives $y=1$.
+Divide the third row by $-2$ to obtain $y=1$.
 
 ### Step 2 — Choose a free variable
 
-Substitute $y=1$ into the first equation:
+Substitute $y=1$ into the first equation and subtract $1$ from both sides:
 
 $$
-x+z=1.
+x+1+z=2\quad\Longrightarrow\quad x+z=1.
 $$
 
 There is no pivot restricting $z$, so let $z=t$, where $t$ is any real number. Then $x=1-t$.

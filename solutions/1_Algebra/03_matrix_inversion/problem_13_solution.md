@@ -37,6 +37,8 @@ The rightmost matrix acts first, so undoing a composite map requires reversing t
 
 ### Step 1 — Compute $T=HS$
 
+Multiply each row of $H$ by each column of $S$:
+
 $$
 T=\begin{pmatrix}
 1&1 \\
@@ -45,6 +47,10 @@ T=\begin{pmatrix}
 \begin{pmatrix}
 2&0 \\
 0&1 \\
+\end{pmatrix}
+=\begin{pmatrix}
+1(2)+1(0)&1(0)+1(1) \\
+0(2)+1(0)&0(0)+1(1) \\
 \end{pmatrix}
 =\begin{pmatrix}
 2&1 \\
@@ -92,6 +98,10 @@ S^{-1}H^{-1}
 0&1 \\
 \end{pmatrix}
 =\begin{pmatrix}
+\frac12(1)+0(0)&\frac12(-1)+0(1) \\
+0(1)+1(0)&0(-1)+1(1) \\
+\end{pmatrix}
+=\begin{pmatrix}
 \frac12&-\frac12 \\
 0&1 \\
 \end{pmatrix},
@@ -109,6 +119,10 @@ H^{-1}S^{-1}
 \end{pmatrix}
 \begin{pmatrix}
 \frac12&0 \\
+0&1 \\
+\end{pmatrix}
+=\begin{pmatrix}
+1\left(\frac12\right)+(-1)(0)&1(0)+(-1)(1) \\
 0&1 \\
 \end{pmatrix}
 =\begin{pmatrix}

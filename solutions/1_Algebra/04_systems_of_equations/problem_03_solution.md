@@ -34,7 +34,7 @@ $$
 
 ### Step 2 — Eliminate the first variable
 
-Apply $R_2\leftarrow R_2-2R_1$:
+Subtract twice row 1 from row 2. The new row is $(2,4\mid7)-2(1,2\mid3)=(0,0\mid1)$:
 
 $$
 \begin{pmatrix}

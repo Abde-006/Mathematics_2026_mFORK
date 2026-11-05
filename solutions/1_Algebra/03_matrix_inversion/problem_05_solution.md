@@ -34,7 +34,7 @@ $$
 
 ### Step 2 — Create a pivot in the third column
 
-Apply $R_3\leftarrow R_3-R_1$:
+Subtract the first row from the third row, entry by entry:
 
 $$
 \begin{pmatrix}
@@ -44,7 +44,17 @@ $$
 \end{pmatrix}.
 $$
 
-Then apply $R_3\leftarrow R_3+R_2$ and $R_3\leftarrow\frac12R_3$:
+Add the second row to the third row. On the left, $(0,-1,1)+(0,1,1)=(0,0,2)$; on the right, $(-1,0,1)+(0,1,0)=(-1,1,1)$:
+
+$$
+\begin{pmatrix}
+1 & 1 & 0 & \mid & 1 & 0 & 0 \\
+0 & 1 & 1 & \mid & 0 & 1 & 0 \\
+0 & 0 & 2 & \mid & -1 & 1 & 1 \\
+\end{pmatrix}.
+$$
+
+Divide the entire third row by $2$ to make its pivot $1$:
 
 $$
 \begin{pmatrix}
@@ -56,7 +66,7 @@ $$
 
 ### Step 3 — Clear the third-column entries above the pivot
 
-Apply $R_2\leftarrow R_2-R_3$:
+Subtract the third row from the second row to eliminate the $1$ above the third-column pivot:
 
 $$
 \begin{pmatrix}
@@ -66,7 +76,7 @@ $$
 \end{pmatrix}.
 $$
 
-Then apply $R_1\leftarrow R_1-R_2$:
+The first row still has a $1$ in the second column. Subtract the second row from the first:
 
 $$
 \begin{pmatrix}

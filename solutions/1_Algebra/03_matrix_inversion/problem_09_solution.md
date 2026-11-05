@@ -36,7 +36,7 @@ Matrix multiplication is not generally commutative, so the inverse must be appli
 
 ### Step 1 — Find $A^{-1}$
 
-Since $A$ is upper triangular with diagonal entries $1,1$,
+To find the inverse, solve $Ay=c$ for an arbitrary vector $c$. The second equation gives $y_2=c_2$. Substituting into the first gives $y_1=c_1-2c_2$. Therefore, the transformation from $c$ to $y$ is represented by $A^{-1}$:
 
 $$
 A^{-1}=\begin{pmatrix}
@@ -47,6 +47,8 @@ A^{-1}=\begin{pmatrix}
 $$
 
 ### Step 2 — Multiply on the left
+
+Multiply each row of $A^{-1}$ by each column of $B$:
 
 $$
 X=A^{-1}B
@@ -59,12 +61,18 @@ X=A^{-1}B
 2&4 \\
 \end{pmatrix}
 =\begin{pmatrix}
+1(3)+(-2)(2)&1(1)+(-2)(4) \\
+0(3)+1(2)&0(1)+1(4) \\
+\end{pmatrix}
+=\begin{pmatrix}
 -1&-7 \\
 2&4 \\
 \end{pmatrix}.
 $$
 
 ### Step 3 — Check in the original equation
+
+Expand each entry as a row-by-column product:
 
 $$
 AX=
@@ -75,6 +83,10 @@ AX=
 \begin{pmatrix}
 -1&-7 \\
 2&4 \\
+\end{pmatrix}
+=\begin{pmatrix}
+1(-1)+2(2)&1(-7)+2(4) \\
+0(-1)+1(2)&0(-7)+1(4) \\
 \end{pmatrix}
 =\begin{pmatrix}
 3&1 \\

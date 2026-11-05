@@ -50,7 +50,10 @@ From the first equation,
 
 $$
 x+2(1-2t)-t=3
-\quad\Longrightarrow\quad x=1+5t.
+\quad\Longrightarrow\quad
+x+2-4t-t=3
+\quad\Longrightarrow\quad
+x=1+5t.
 $$
 
 ## Verification

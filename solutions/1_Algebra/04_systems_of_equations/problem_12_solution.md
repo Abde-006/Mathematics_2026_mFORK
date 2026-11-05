@@ -26,7 +26,7 @@ A homogeneous system has the form $Ax=0$. Its zero vector always solves it becau
 
 ### Step 1 — Identify the redundant equation
 
-The second equation is exactly twice the first, so it adds no new condition. The independent equations are
+The second equation is exactly twice the first: multiplying $x+2y-z=0$ by $2$ gives $2x+4y-2z=0$. It adds no new condition. Keep the first and third equations:
 
 $$
 x+2y-z=0,\qquad x-y+2z=0.
@@ -34,16 +34,16 @@ $$
 
 ### Step 2 — Relate the variables
 
-Subtract the second independent equation from the first:
+Subtract the third equation from the first:
 
 $$
-3y-3z=0\quad\Longrightarrow\quad y=z.
+3y-3z=0\quad\Longrightarrow\quad 3(y-z)=0\quad\Longrightarrow\quad y=z.
 $$
 
-Let the free variable $z=t$, so $y=t$. Substitution into $x+2y-z=0$ gives
+Let the free variable $z=t$, so $y=t$. Substitute $y=t$ and $z=t$ into the first equation:
 
 $$
-x+2t-t=0\quad\Longrightarrow\quad x=-t.
+x+2t-t=0\quad\Longrightarrow\quad x+t=0\quad\Longrightarrow\quad x=-t.
 $$
 
 ### Step 3 — Describe all solutions

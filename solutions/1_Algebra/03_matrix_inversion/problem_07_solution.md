@@ -36,6 +36,8 @@ The reversal is necessary because $B$ acts first on a vector when the product $A
 
 ### Step 1 — Multiply $A$ and $B$
 
+Each entry is found by multiplying a row of $A$ by a column of $B$:
+
 $$
 AB=\begin{pmatrix}
 1&1 \\
@@ -46,6 +48,10 @@ AB=\begin{pmatrix}
 0&3 \\
 \end{pmatrix}
 =\begin{pmatrix}
+1(2)+1(0)&1(0)+1(3) \\
+0(2)+1(0)&0(0)+1(3) \\
+\end{pmatrix}
+=\begin{pmatrix}
 2&3 \\
 0&3 \\
 \end{pmatrix}.
@@ -53,7 +59,7 @@ $$
 
 ### Step 2 — Invert the product
 
-The determinant of $AB$ is $2\cdot3=6$. Therefore
+The determinant is $2\cdot3-3\cdot0=6$, so the product is invertible. Swap the diagonal entries and change the sign of the upper-right entry in the $2\times2$ inverse formula:
 
 $$
 (AB)^{-1}
@@ -92,6 +98,10 @@ B^{-1}A^{-1}
 \begin{pmatrix}
 1&-1 \\
 0&1 \\
+\end{pmatrix}
+=\begin{pmatrix}
+\frac12(1)+0(0)&\frac12(-1)+0(1) \\
+0(1)+\frac13(0)&0(-1)+\frac13(1) \\
 \end{pmatrix}
 =\begin{pmatrix}
 \frac12&-\frac12 \\

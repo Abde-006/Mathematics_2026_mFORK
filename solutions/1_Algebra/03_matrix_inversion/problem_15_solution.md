@@ -30,6 +30,8 @@ If $A$ is invertible, then $x=A^{-1}b$. Gaussian elimination instead applies row
 
 ### Method 1 — Use the inverse
 
+Calculate the determinant, then use the $2\times2$ inverse formula:
+
 First,
 
 $$
@@ -54,6 +56,10 @@ x=A^{-1}b
 8 \\
 \end{pmatrix}
 =\frac15\begin{pmatrix}
+3(7)+(-1)(8) \\
+(-1)(7)+2(8) \\
+\end{pmatrix}
+=\frac15\begin{pmatrix}
 21-8 \\
 -7+16 \\
 \end{pmatrix}
@@ -65,7 +71,7 @@ $$
 
 ### Method 2 — Gaussian elimination
 
-Start with the augmented matrix:
+Write the augmented matrix:
 
 $$
 \begin{pmatrix}
@@ -74,26 +80,48 @@ $$
 \end{pmatrix}.
 $$
 
-Apply $R_2\leftarrow R_2-\frac12R_1$:
+Swap the two rows, $R_1\leftrightarrow R_2$:
 
 $$
 \begin{pmatrix}
+1 & 3 & \mid & 8 \\
 2 & 1 & \mid & 7 \\
-0 & \frac52 & \mid & \frac92 \\
+\end{pmatrix}.
+$$
+
+Next apply $R_2\leftarrow R_2-2R_1$. The second row becomes
+$(2,1\mid7)-2(1,3\mid8)=(0,-5\mid-9)$, so
+
+$$
+\begin{pmatrix}
+1 & 3 & \mid & 8 \\
+0 & -5 & \mid & -9 \\
+\end{pmatrix}.
+$$
+
+Divide the second row by $-5$:
+
+$$
+\begin{pmatrix}
+1 & 3 & \mid & 8 \\
+0 & 1 & \mid & \frac95 \\
 \end{pmatrix}.
 $$
 
 The second row gives
 
 $$
-\frac52y=\frac92\quad\Longrightarrow\quad y=\frac95.
+y=\frac95.
 $$
 
-Substitute into $2x+y=7$:
+Substitute this value into the first row, $x+3y=8$:
 
 $$
-2x+\frac95=7\quad\Longrightarrow\quad2x=\frac{26}{5}
-\quad\Longrightarrow\quad x=\frac{13}{5}.
+x+3\left(\frac95\right)=8
+\quad\Longrightarrow\quad
+x=8-\frac{27}{5}
+=\frac{40}{5}-\frac{27}{5}
+=\frac{13}{5}.
 $$
 
 ## Verification and Comparison

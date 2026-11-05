@@ -26,13 +26,13 @@ Subtracting equations can eliminate common terms. Division by an expression invo
 
 ### Step 1 — Eliminate the common terms
 
-Subtract equation 1 from equation 2:
+Subtract equation 1 from equation 2. The $x$ and $z$ terms cancel, leaving $(t-1)y$ on the left and $2-1=1$ on the right:
 
 $$
 (t-1)y=1.
 $$
 
-Subtract equation 1 from equation 3:
+Subtract equation 1 from equation 3. The $x$ and $y$ terms cancel, leaving $(t-1)z$ on the left and $3-1=2$ on the right:
 
 $$
 (t-1)z=2.
@@ -50,6 +50,12 @@ Using equation 1,
 
 $$
 x=1-y-z=1-\frac3{t-1}.
+$$
+
+Writing this as one fraction gives
+
+$$
+x=\frac{t-1-3}{t-1}=\frac{t-4}{t-1}.
 $$
 
 These values determine all variables, so there is exactly one solution:

@@ -30,6 +30,8 @@ Use the order $x,y,z$. The coefficients in the first equation are $2,-1,1$; in t
 
 ### Step 2 — Form the matrices and vectors
 
+Place the coefficients of each equation in a row, in the chosen variable order. Constants on the right form the vector $b$:
+
 $$
 A=\begin{pmatrix}
 2&-1&1 \\
@@ -44,6 +46,31 @@ z \\
 \end{pmatrix},
 \qquad
 b=\begin{pmatrix}
+4 \\
+1 \\
+7 \\
+\end{pmatrix}.
+$$
+
+The matrix product reproduces the system:
+
+$$
+\begin{pmatrix}
+2&-1&1 \\
+1&3&-2 \\
+3&1&1 \\
+\end{pmatrix}
+\begin{pmatrix}
+x \\
+y \\
+z \\
+\end{pmatrix}
+=\begin{pmatrix}
+2x-y+z \\
+x+3y-2z \\
+3x+y+z \\
+\end{pmatrix}
+=\begin{pmatrix}
 4 \\
 1 \\
 7 \\

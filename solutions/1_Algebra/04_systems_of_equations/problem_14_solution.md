@@ -32,13 +32,13 @@ Equations that are linear combinations of other equations must have right-hand s
 
 ### Step 1 — Combine the first two equations
 
-Add $x+y=2$ and $2x-y=1$:
+Add the first two equations term by term. The $y$ terms cancel:
 
 $$
 3x=3.
 $$
 
-Thus the first two equations force $x=1$, and then $y=1$.
+Divide by $3$ to get $x=1$. Substitute into $x+y=2$ to get $1+y=2$, so $y=1$.
 
 ### Step 2 — Test the first system
 
@@ -46,7 +46,7 @@ The third equation is $3x=3$, exactly the equation derived from the first two. H
 
 ### Step 3 — Test the altered system
 
-The first two equations still force $3x=3$, while the altered third equation requires $3x=3.1$. Subtracting gives $0=0.1$, a contradiction. Therefore the altered system is inconsistent.
+The first two equations still force $3x=3$, while the altered third equation requires $3x=3.1$. Subtract the equation derived from the first two from the altered third: $3x-3x=3.1-3$, giving $0=0.1$, a contradiction. Therefore the altered system is inconsistent.
 
 ## Verification
 

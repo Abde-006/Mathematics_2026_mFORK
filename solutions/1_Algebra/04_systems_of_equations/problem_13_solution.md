@@ -29,17 +29,17 @@ $$
 \quad\Longrightarrow\quad x_1-x_3=2.
 $$
 
-This is exactly the third equation, so it is redundant.
+The left side simplifies to $x_1-x_3$ and the right side to $10-8=2$. This gives exactly the third equation, so it is redundant.
 
 ### Step 2 — Solve the independent equations
 
-Let $x_2=s$ be free. From the first equation,
+Let $x_2=s$ be free. Solve the first equation for $x_1$:
 
 $$
 x_1=10-s.
 $$
 
-From the second,
+Solve the second equation for $x_3$:
 
 $$
 x_3=8-s.

@@ -28,23 +28,27 @@ When systems have the same coefficient matrix, elimination uses the same row ope
 
 ### Step 1 — Eliminate $x$ in the first system
 
-Subtract twice the second equation from the first:
+Subtract twice the second equation from the first. The $x$-terms cancel, and the $y$-terms become $y-2(-y)=3y$:
 
 $$
 (2x+y)-2(x-y)=5-2(1),
 $$
 
-so $3y=3$, giving $y=1$. Then $x-y=1$ gives $x=2$.
+so $3y=3$. Divide by $3$ to obtain $y=1$. Substitute into $x-y=1$:
+
+$$
+x-1=1\quad\Longrightarrow\quad x=2.
+$$
 
 ### Step 2 — Eliminate $x$ in the second system
 
-Use the same combination of left-hand sides:
+Use the same combination of left-hand sides, so the coefficients again reduce to $3y$:
 
 $$
 (2x+y)-2(x-y)=1-2(4),
 $$
 
-so $3y=-7$, giving $y=-7/3$. Then $x-y=4$ gives
+so $3y=-7$. Divide by $3$ to obtain $y=-7/3$. Then $x-y=4$ gives
 
 $$
 x=4-\frac73=\frac53.

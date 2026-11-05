@@ -34,7 +34,7 @@ $$
 
 ### Step 2 — Eliminate below the first pivot
 
-Apply $R_2\leftarrow R_2-3R_1$:
+The first pivot is the $1$ in the upper-left corner. Subtract three times the first row from the second row. On the left this gives $(3,5)-3(1,2)=(0,-1)$; apply the same operation to the right-hand entries:
 
 $$
 \begin{pmatrix}
@@ -43,7 +43,7 @@ $$
 \end{pmatrix}.
 $$
 
-Then apply $R_2\leftarrow -R_2$:
+Multiply the entire second row by $-1$ so its pivot becomes $1$:
 
 $$
 \begin{pmatrix}
@@ -54,7 +54,7 @@ $$
 
 ### Step 3 — Eliminate above the second pivot
 
-Apply $R_1\leftarrow R_1-2R_2$:
+The second pivot is now $1$. Subtract twice the second row from the first to make the entry above it zero:
 
 $$
 \begin{pmatrix}

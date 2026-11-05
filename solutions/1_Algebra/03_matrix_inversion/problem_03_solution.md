@@ -33,13 +33,13 @@ Therefore $A$ is singular and has no inverse.
 
 ### Step 2 — Check the rows
 
-The first row is twice the second:
+Compare the two rows. Multiplying the second row by $2$ gives the first:
 
 $$
 (2,4)=2(1,2).
 $$
 
-Thus the rows are linearly dependent. One row contributes no information beyond the other, so the matrix does not have full rank and cannot be inverted.
+Thus one row contributes no information beyond the other. The rows are linearly dependent, so the matrix does not have full rank and cannot be inverted.
 
 ## Verification
 
