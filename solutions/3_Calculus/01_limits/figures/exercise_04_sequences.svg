@@ -1,0 +1,160 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="690" viewBox="0 0 940 690" role="img" aria-labelledby="title desc">
+<title id="title">Exercise 4: powers and oscillation</title>
+<desc id="desc">Four sequence plots: decay to zero, growth without bound, persistent oscillation, and shrinking oscillation.</desc>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<style>text{font-family:Arial,Helvetica,sans-serif;fill:#0f172a}.grid{stroke:#e2e8f0;stroke-width:1}.axis{stroke:#334155;stroke-width:1.5}.tick{font-size:12px;fill:#475569}.label{font-size:13px;font-weight:600}.paneltitle{font-size:16px;font-weight:700}.mainTitle{font-size:20px;font-weight:700}.legend{font-size:14px;fill:#334155}</style>
+<text x="470.00" y="32.00" class="mainTitle" text-anchor="middle">Sequence behavior: convergence, growth, and oscillation</text>
+<text x="240.00" y="65.00" class="paneltitle" text-anchor="middle">(2/3)^n: tends to 0</text>
+<line x1="68.00" y1="79.00" x2="68.00" y2="311.00" class="grid"/>
+<text x="68.00" y="328.00" class="tick" text-anchor="middle">0</text>
+<line x1="131.00" y1="79.00" x2="131.00" y2="311.00" class="grid"/>
+<text x="131.00" y="328.00" class="tick" text-anchor="middle">2</text>
+<line x1="194.00" y1="79.00" x2="194.00" y2="311.00" class="grid"/>
+<text x="194.00" y="328.00" class="tick" text-anchor="middle">4</text>
+<line x1="257.00" y1="79.00" x2="257.00" y2="311.00" class="grid"/>
+<text x="257.00" y="328.00" class="tick" text-anchor="middle">6</text>
+<line x1="320.00" y1="79.00" x2="320.00" y2="311.00" class="grid"/>
+<text x="320.00" y="328.00" class="tick" text-anchor="middle">8</text>
+<line x1="383.00" y1="79.00" x2="383.00" y2="311.00" class="grid"/>
+<text x="383.00" y="328.00" class="tick" text-anchor="middle">10</text>
+<line x1="446.00" y1="79.00" x2="446.00" y2="311.00" class="grid"/>
+<text x="446.00" y="328.00" class="tick" text-anchor="middle">12</text>
+<line x1="68.00" y1="311.00" x2="446.00" y2="311.00" class="grid"/>
+<text x="59.00" y="315.00" class="tick" text-anchor="end">0</text>
+<line x1="68.00" y1="205.55" x2="446.00" y2="205.55" class="grid"/>
+<text x="59.00" y="209.55" class="tick" text-anchor="end">0.5</text>
+<line x1="68.00" y1="100.09" x2="446.00" y2="100.09" class="grid"/>
+<text x="59.00" y="104.09" class="tick" text-anchor="end">1</text>
+<line x1="68.00" y1="79.00" x2="68.00" y2="311.00" class="axis"/>
+<line x1="68.00" y1="311.00" x2="446.00" y2="311.00" class="axis"/>
+<line x1="68.00" y1="79.00" x2="68.00" y2="311.00" class="axis"/>
+<line x1="68.00" y1="311.00" x2="446.00" y2="311.00" class="axis"/>
+<text x="257.00" y="343.00" class="label" text-anchor="middle">n</text>
+<text x="31" y="195.00" class="label" text-anchor="middle" transform="rotate(-90 31 195.00)">y</text>
+<circle cx="68.00" cy="100.09" r="5" fill="#2563eb" stroke="#2563eb" stroke-width="2.5"/>
+<circle cx="99.50" cy="170.39" r="5" fill="#2563eb" stroke="#2563eb" stroke-width="2.5"/>
+<circle cx="131.00" cy="217.26" r="5" fill="#2563eb" stroke="#2563eb" stroke-width="2.5"/>
+<circle cx="162.50" cy="248.51" r="5" fill="#2563eb" stroke="#2563eb" stroke-width="2.5"/>
+<circle cx="194.00" cy="269.34" r="5" fill="#2563eb" stroke="#2563eb" stroke-width="2.5"/>
+<circle cx="225.50" cy="283.23" r="5" fill="#2563eb" stroke="#2563eb" stroke-width="2.5"/>
+<circle cx="257.00" cy="292.48" r="5" fill="#2563eb" stroke="#2563eb" stroke-width="2.5"/>
+<circle cx="288.50" cy="298.66" r="5" fill="#2563eb" stroke="#2563eb" stroke-width="2.5"/>
+<circle cx="320.00" cy="302.77" r="5" fill="#2563eb" stroke="#2563eb" stroke-width="2.5"/>
+<circle cx="351.50" cy="305.51" r="5" fill="#2563eb" stroke="#2563eb" stroke-width="2.5"/>
+<circle cx="383.00" cy="307.34" r="5" fill="#2563eb" stroke="#2563eb" stroke-width="2.5"/>
+<circle cx="414.50" cy="308.56" r="5" fill="#2563eb" stroke="#2563eb" stroke-width="2.5"/>
+<circle cx="446.00" cy="309.37" r="5" fill="#2563eb" stroke="#2563eb" stroke-width="2.5"/>
+<text x="700.00" y="65.00" class="paneltitle" text-anchor="middle">(3/2)^n: grows without bound</text>
+<line x1="528.00" y1="79.00" x2="528.00" y2="311.00" class="grid"/>
+<text x="528.00" y="328.00" class="tick" text-anchor="middle">0</text>
+<line x1="622.50" y1="79.00" x2="622.50" y2="311.00" class="grid"/>
+<text x="622.50" y="328.00" class="tick" text-anchor="middle">2</text>
+<line x1="717.00" y1="79.00" x2="717.00" y2="311.00" class="grid"/>
+<text x="717.00" y="328.00" class="tick" text-anchor="middle">4</text>
+<line x1="811.50" y1="79.00" x2="811.50" y2="311.00" class="grid"/>
+<text x="811.50" y="328.00" class="tick" text-anchor="middle">6</text>
+<line x1="906.00" y1="79.00" x2="906.00" y2="311.00" class="grid"/>
+<text x="906.00" y="328.00" class="tick" text-anchor="middle">8</text>
+<line x1="528.00" y1="311.00" x2="906.00" y2="311.00" class="grid"/>
+<text x="519.00" y="315.00" class="tick" text-anchor="end">0</text>
+<line x1="528.00" y1="228.14" x2="906.00" y2="228.14" class="grid"/>
+<text x="519.00" y="232.14" class="tick" text-anchor="end">10</text>
+<line x1="528.00" y1="145.29" x2="906.00" y2="145.29" class="grid"/>
+<text x="519.00" y="149.29" class="tick" text-anchor="end">20</text>
+<line x1="528.00" y1="79.00" x2="528.00" y2="311.00" class="axis"/>
+<line x1="528.00" y1="311.00" x2="906.00" y2="311.00" class="axis"/>
+<line x1="528.00" y1="79.00" x2="528.00" y2="311.00" class="axis"/>
+<line x1="528.00" y1="311.00" x2="906.00" y2="311.00" class="axis"/>
+<text x="717.00" y="343.00" class="label" text-anchor="middle">n</text>
+<text x="491" y="195.00" class="label" text-anchor="middle" transform="rotate(-90 491 195.00)">y</text>
+<circle cx="528.00" cy="302.71" r="5" fill="#ea580c" stroke="#ea580c" stroke-width="2.5"/>
+<circle cx="575.25" cy="298.57" r="5" fill="#ea580c" stroke="#ea580c" stroke-width="2.5"/>
+<circle cx="622.50" cy="292.36" r="5" fill="#ea580c" stroke="#ea580c" stroke-width="2.5"/>
+<circle cx="669.75" cy="283.04" r="5" fill="#ea580c" stroke="#ea580c" stroke-width="2.5"/>
+<circle cx="717.00" cy="269.05" r="5" fill="#ea580c" stroke="#ea580c" stroke-width="2.5"/>
+<circle cx="764.25" cy="248.08" r="5" fill="#ea580c" stroke="#ea580c" stroke-width="2.5"/>
+<circle cx="811.50" cy="216.62" r="5" fill="#ea580c" stroke="#ea580c" stroke-width="2.5"/>
+<circle cx="858.75" cy="169.43" r="5" fill="#ea580c" stroke="#ea580c" stroke-width="2.5"/>
+<circle cx="906.00" cy="98.65" r="5" fill="#ea580c" stroke="#ea580c" stroke-width="2.5"/>
+<text x="240.00" y="385.00" class="paneltitle" text-anchor="middle">(-1)^n: does not converge</text>
+<line x1="68.00" y1="399.00" x2="68.00" y2="631.00" class="grid"/>
+<text x="68.00" y="648.00" class="tick" text-anchor="middle">0</text>
+<line x1="131.00" y1="399.00" x2="131.00" y2="631.00" class="grid"/>
+<text x="131.00" y="648.00" class="tick" text-anchor="middle">2</text>
+<line x1="194.00" y1="399.00" x2="194.00" y2="631.00" class="grid"/>
+<text x="194.00" y="648.00" class="tick" text-anchor="middle">4</text>
+<line x1="257.00" y1="399.00" x2="257.00" y2="631.00" class="grid"/>
+<text x="257.00" y="648.00" class="tick" text-anchor="middle">6</text>
+<line x1="320.00" y1="399.00" x2="320.00" y2="631.00" class="grid"/>
+<text x="320.00" y="648.00" class="tick" text-anchor="middle">8</text>
+<line x1="383.00" y1="399.00" x2="383.00" y2="631.00" class="grid"/>
+<text x="383.00" y="648.00" class="tick" text-anchor="middle">10</text>
+<line x1="446.00" y1="399.00" x2="446.00" y2="631.00" class="grid"/>
+<text x="446.00" y="648.00" class="tick" text-anchor="middle">12</text>
+<line x1="68.00" y1="592.33" x2="446.00" y2="592.33" class="grid"/>
+<text x="59.00" y="596.33" class="tick" text-anchor="end">-1</text>
+<line x1="68.00" y1="515.00" x2="446.00" y2="515.00" class="grid"/>
+<text x="59.00" y="519.00" class="tick" text-anchor="end">0</text>
+<line x1="68.00" y1="437.67" x2="446.00" y2="437.67" class="grid"/>
+<text x="59.00" y="441.67" class="tick" text-anchor="end">1</text>
+<line x1="68.00" y1="399.00" x2="68.00" y2="631.00" class="axis"/>
+<line x1="68.00" y1="515.00" x2="446.00" y2="515.00" class="axis"/>
+<line x1="68.00" y1="399.00" x2="68.00" y2="631.00" class="axis"/>
+<line x1="68.00" y1="631.00" x2="446.00" y2="631.00" class="axis"/>
+<text x="257.00" y="663.00" class="label" text-anchor="middle">n</text>
+<text x="31" y="515.00" class="label" text-anchor="middle" transform="rotate(-90 31 515.00)">y</text>
+<line x1="68.00" y1="515.00" x2="446.00" y2="515.00" stroke="#64748b" stroke-width="1.7" stroke-dasharray="5,5"/>
+<circle cx="68.00" cy="437.67" r="5" fill="#7c3aed" stroke="#7c3aed" stroke-width="2.5"/>
+<circle cx="99.50" cy="592.33" r="5" fill="#7c3aed" stroke="#7c3aed" stroke-width="2.5"/>
+<circle cx="131.00" cy="437.67" r="5" fill="#7c3aed" stroke="#7c3aed" stroke-width="2.5"/>
+<circle cx="162.50" cy="592.33" r="5" fill="#7c3aed" stroke="#7c3aed" stroke-width="2.5"/>
+<circle cx="194.00" cy="437.67" r="5" fill="#7c3aed" stroke="#7c3aed" stroke-width="2.5"/>
+<circle cx="225.50" cy="592.33" r="5" fill="#7c3aed" stroke="#7c3aed" stroke-width="2.5"/>
+<circle cx="257.00" cy="437.67" r="5" fill="#7c3aed" stroke="#7c3aed" stroke-width="2.5"/>
+<circle cx="288.50" cy="592.33" r="5" fill="#7c3aed" stroke="#7c3aed" stroke-width="2.5"/>
+<circle cx="320.00" cy="437.67" r="5" fill="#7c3aed" stroke="#7c3aed" stroke-width="2.5"/>
+<circle cx="351.50" cy="592.33" r="5" fill="#7c3aed" stroke="#7c3aed" stroke-width="2.5"/>
+<circle cx="383.00" cy="437.67" r="5" fill="#7c3aed" stroke="#7c3aed" stroke-width="2.5"/>
+<circle cx="414.50" cy="592.33" r="5" fill="#7c3aed" stroke="#7c3aed" stroke-width="2.5"/>
+<circle cx="446.00" cy="437.67" r="5" fill="#7c3aed" stroke="#7c3aed" stroke-width="2.5"/>
+<text x="700.00" y="385.00" class="paneltitle" text-anchor="middle">(-1)^n/n: oscillates toward 0</text>
+<line x1="528.00" y1="399.00" x2="528.00" y2="631.00" class="grid"/>
+<text x="528.00" y="648.00" class="tick" text-anchor="middle">0</text>
+<line x1="622.50" y1="399.00" x2="622.50" y2="631.00" class="grid"/>
+<text x="622.50" y="648.00" class="tick" text-anchor="middle">4</text>
+<line x1="717.00" y1="399.00" x2="717.00" y2="631.00" class="grid"/>
+<text x="717.00" y="648.00" class="tick" text-anchor="middle">8</text>
+<line x1="811.50" y1="399.00" x2="811.50" y2="631.00" class="grid"/>
+<text x="811.50" y="648.00" class="tick" text-anchor="middle">12</text>
+<line x1="906.00" y1="399.00" x2="906.00" y2="631.00" class="grid"/>
+<text x="906.00" y="648.00" class="tick" text-anchor="middle">16</text>
+<line x1="528.00" y1="611.67" x2="906.00" y2="611.67" class="grid"/>
+<text x="519.00" y="615.67" class="tick" text-anchor="end">-1</text>
+<line x1="528.00" y1="515.00" x2="906.00" y2="515.00" class="grid"/>
+<text x="519.00" y="519.00" class="tick" text-anchor="end">0</text>
+<line x1="528.00" y1="418.33" x2="906.00" y2="418.33" class="grid"/>
+<text x="519.00" y="422.33" class="tick" text-anchor="end">1</text>
+<line x1="528.00" y1="399.00" x2="528.00" y2="631.00" class="axis"/>
+<line x1="528.00" y1="515.00" x2="906.00" y2="515.00" class="axis"/>
+<line x1="528.00" y1="399.00" x2="528.00" y2="631.00" class="axis"/>
+<line x1="528.00" y1="631.00" x2="906.00" y2="631.00" class="axis"/>
+<text x="717.00" y="663.00" class="label" text-anchor="middle">n</text>
+<text x="491" y="515.00" class="label" text-anchor="middle" transform="rotate(-90 491 515.00)">y</text>
+<line x1="528.00" y1="515.00" x2="906.00" y2="515.00" stroke="#64748b" stroke-width="1.7" stroke-dasharray="5,5"/>
+<circle cx="551.62" cy="611.67" r="5" fill="#059669" stroke="#059669" stroke-width="2.5"/>
+<circle cx="575.25" cy="466.67" r="5" fill="#059669" stroke="#059669" stroke-width="2.5"/>
+<circle cx="598.88" cy="547.22" r="5" fill="#059669" stroke="#059669" stroke-width="2.5"/>
+<circle cx="622.50" cy="490.83" r="5" fill="#059669" stroke="#059669" stroke-width="2.5"/>
+<circle cx="646.12" cy="534.33" r="5" fill="#059669" stroke="#059669" stroke-width="2.5"/>
+<circle cx="669.75" cy="498.89" r="5" fill="#059669" stroke="#059669" stroke-width="2.5"/>
+<circle cx="693.38" cy="528.81" r="5" fill="#059669" stroke="#059669" stroke-width="2.5"/>
+<circle cx="717.00" cy="502.92" r="5" fill="#059669" stroke="#059669" stroke-width="2.5"/>
+<circle cx="740.62" cy="525.74" r="5" fill="#059669" stroke="#059669" stroke-width="2.5"/>
+<circle cx="764.25" cy="505.33" r="5" fill="#059669" stroke="#059669" stroke-width="2.5"/>
+<circle cx="787.88" cy="523.79" r="5" fill="#059669" stroke="#059669" stroke-width="2.5"/>
+<circle cx="811.50" cy="506.94" r="5" fill="#059669" stroke="#059669" stroke-width="2.5"/>
+<circle cx="835.12" cy="522.44" r="5" fill="#059669" stroke="#059669" stroke-width="2.5"/>
+<circle cx="858.75" cy="508.10" r="5" fill="#059669" stroke="#059669" stroke-width="2.5"/>
+<circle cx="882.38" cy="521.44" r="5" fill="#059669" stroke="#059669" stroke-width="2.5"/>
+<circle cx="906.00" cy="508.96" r="5" fill="#059669" stroke="#059669" stroke-width="2.5"/>
+</svg>
