@@ -2,7 +2,15 @@
 
 ## Problem Statement
 
-Use a sequence and a function from the set to compare numerical observations with analytical limits, and explain why tables and sketches are not proofs.
+Choose one sequence and one function from this set. For the sequence, calculate several terms for increasingly large $n$. For the function, prepare a table of values with arguments approaching its limit point from the left and from the right. Sketch both objects, compare your observations with the analytical limits, and explain why finitely many calculations or a sketch do not prove that a limit exists.
+
+For this solution, use the sequence from Exercise 1 and the function from Exercise 7:
+
+$$
+a_n=\frac{4n^2-3n+1}{2n^2+5n-7},
+\qquad
+g(x)=\frac{x^2-4x+3}{x-3}.
+$$
 
 ## Step-by-Step Solution
 

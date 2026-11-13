@@ -2,7 +2,7 @@
 
 ## Problem Statement
 
-Compute both limits and compare the polynomial degrees:
+Compute both limits, compare the two cases, and formulate a general observation about how the degrees of the numerator and denominator affect the result:
 
 $$
 \lim_{n\to\infty}\frac{3n+1}{n^2+4},

@@ -8,7 +8,7 @@ $$
 \lim_{n\to\infty}\left(1+\frac1n\right)^n
 $$
 
-and compare several terms with the limiting value.
+Calculate several terms for increasing values of $n$ and compare their behavior with the limiting value. Explain why a few numerical values do not constitute a proof of the limit.
 
 ## Step-by-Step Solution
 

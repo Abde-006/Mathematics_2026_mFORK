@@ -2,7 +2,7 @@
 
 ## Problem Statement
 
-Compute
+Compute the limit, explain which term dominates and why, and describe how this comparison differs from comparing the degrees in a quotient of polynomials:
 
 $$
 \lim_{n\to\infty}\sqrt[n]{5^n+2^n}.

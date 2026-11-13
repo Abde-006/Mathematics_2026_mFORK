@@ -2,7 +2,7 @@
 
 ## Problem Statement
 
-Compute
+Compute the limit, connect it with the classical limit in Exercise 5, and show the transformation that reduces this expression to that pattern:
 
 $$
 \lim_{x\to0}(1+3x)^{1/x}.

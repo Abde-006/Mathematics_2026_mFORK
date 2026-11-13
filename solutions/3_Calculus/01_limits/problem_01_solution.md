@@ -2,7 +2,7 @@
 
 ## Problem Statement
 
-Compute
+Compute the limit and explain why the highest-degree terms determine its value:
 
 $$
 \lim_{n\to\infty}\frac{4n^2-3n+1}{2n^2+5n-7}.

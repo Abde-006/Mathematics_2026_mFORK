@@ -8,7 +8,7 @@ $$
 \lim_{x\to0}\frac{\sin x}{x}=1,
 $$
 
-compute
+compute both limits and show how each expression reduces to the fundamental limit:
 
 $$
 \lim_{x\to0}\frac{\sin5x}{x},

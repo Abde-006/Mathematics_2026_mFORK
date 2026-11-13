@@ -2,13 +2,13 @@
 
 ## Problem Statement
 
-Analyze the one-sided limits of
+Analyze the left-hand and right-hand limits of
 
 $$
 f(x)=\frac1{x-2}
 $$
 
-as $x\to2$, and identify the vertical asymptote.
+as $x\to2$. Determine whether the two-sided limit exists, interpret the one-sided behavior on a sketch of the graph, and identify the vertical asymptote.
 
 ## Step-by-Step Solution
 

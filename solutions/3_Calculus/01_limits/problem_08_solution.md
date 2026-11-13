@@ -8,7 +8,7 @@ $$
 \lim_{x\to4}\frac{\sqrt{x}-2}{x-4}
 $$
 
-by rationalizing the numerator.
+by rationalizing the numerator. Compare this method with the conjugate method used in Exercise 3 for the sequence limit.
 
 ## Step-by-Step Solution
 

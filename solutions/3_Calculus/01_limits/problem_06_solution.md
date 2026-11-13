@@ -2,7 +2,7 @@
 
 ## Problem Statement
 
-Compute
+Compute the limit. Compare the method with Exercise 1: explain what changes when the variable ranges over real values rather than integer indices, and what remains the same.
 
 $$
 \lim_{x\to\infty}\frac{3x^2-x+1}{5x^2+4x-2}.

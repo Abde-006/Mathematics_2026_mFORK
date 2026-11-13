@@ -2,7 +2,7 @@
 
 ## Problem Statement
 
-Analyze the behavior of
+For each sequence below, describe its type of behavior and justify your conclusion:
 
 $$
 \left(\frac23\right)^n,\qquad

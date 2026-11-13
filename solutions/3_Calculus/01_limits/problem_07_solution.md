@@ -2,7 +2,7 @@
 
 ## Problem Statement
 
-Compute
+Compute the limit and explain why the value of the function at $x=3$ is not needed to determine it.
 
 $$
 \lim_{x\to3}\frac{x^2-4x+3}{x-3}.

@@ -2,7 +2,7 @@
 
 ## Problem Statement
 
-Compute
+Compute the limit using the conjugate expression, and explain why multiplying by the conjugate removes the difficulty of subtracting two large, nearly equal quantities:
 
 $$
 \lim_{n\to\infty}\left(\sqrt{n^2+5n}-n\right)

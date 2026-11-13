@@ -2,7 +2,13 @@
 
 ## Problem Statement
 
-Compute, without l'Hôpital's rule,
+Compute the limit without using l'Hôpital's rule. Justify the result with a trigonometric identity and the fundamental limit
+
+$$
+\lim_{u\to0}\frac{\sin u}{u}=1
+$$
+
+by reducing the expression to that known limit:
 
 $$
 \lim_{x\to0}\frac{1-\cos x}{x^2}.
