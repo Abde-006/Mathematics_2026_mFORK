@@ -1,71 +1,84 @@
-# Exercise 10 — Continuity of a Piecewise Function
+# Problem 10. Continuity of a Piecewise Function
 
-## Problem Statement
+## Problem statement
 
 Find $a$ so that
 
 $$
 f(x)=
 \begin{cases}
-ax+1, & x<2, \\
-x^2-1, & x\ge2
+ax+1,&x<2, \\
+x^2-1,&x\ge2
 \end{cases}
 $$
 
-is continuous at $x=2$. Compare both one-sided limits with $f(2)$.
+is continuous at $x=2$.
 
-## Step-by-Step Solution
+## Named quantities
 
-### Step 1 — Compute the left-hand limit
+- $a$ is the unknown slope of the left branch.
+- $L^-$ is the left-hand limit.
+- $L^+$ is the right-hand limit.
+- $f(2)$ is the function value.
 
-For $x<2$, use the expression $ax+1$:
+## Step 1 - Compute $L^-$
 
-$$
-\lim_{x\to2^-}f(x)
-=\lim_{x\to2^-}(ax+1)
-=2a+1.
-$$
-
-### Step 2 — Compute the right-hand limit and function value
-
-For $x\ge2$, use $x^2-1$. Thus
+**Continuity test.** A function is continuous at $x=c$ when
 
 $$
-\lim_{x\to2^+}f(x)
-=2^2-1=3,
+\lim_{x\to c^-}f(x)
+=\lim_{x\to c^+}f(x)
+=f(c).
 $$
 
-and because the second branch includes $x=2$,
+For $x<2$, $f(x)=ax+1$, so
+
+$$
+L^-=\lim_{x\to2^-}(ax+1)=2a+1.
+$$
+
+## Step 2 - Compute $L^+$ and $f(2)$
+
+For $x\ge2$, $f(x)=x^2-1$, so
+
+$$
+L^+=\lim_{x\to2^+}(x^2-1)=4-1=3
+$$
+
+and
 
 $$
 f(2)=2^2-1=3.
 $$
 
-### Step 3 — Enforce continuity
+## Step 3 - Match the quantities
 
-Continuity requires the left-hand limit, right-hand limit, and function value to agree. The right-hand limit already equals $f(2)$, so set the left-hand limit equal to $3$:
+Continuity requires
 
 $$
-2a+1=3
-\quad\Longrightarrow\quad
-2a=2
-\quad\Longrightarrow\quad
-a=1.
+2a+1=3.
 $$
 
-For this value, all three quantities are $3$.
-
-The graph for $a=1$ shows the two pieces meeting at $(2,3)$:
-
-![Graph of the piecewise function for a=1, with both pieces meeting at x=2](./figures/exercise_10_piecewise_continuity.svg)
-
-## Final Answer
+Subtracting $1$ and dividing by $2$ gives
 
 $$
 a=1.
 $$
 
-## Key Takeaways
+## Verification
 
-- At a piecewise boundary, evaluate the left and right branches separately.
-- Continuity requires both one-sided limits to equal the function value.
+With $a=1$,
+
+$$
+L^-=2(1)+1=3=L^+=f(2).
+$$
+
+## Interpretation
+
+The left and right branches meet at $(2,3)$, so the graph has no jump at $x=2$.
+
+## Final answer
+
+$$
+a=1
+$$

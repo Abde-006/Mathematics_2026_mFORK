@@ -1,54 +1,57 @@
-# Exercise 9 — One-Sided Limits and a Vertical Asymptote
+# Problem 9. One-Sided Limits and an Asymptote
 
-## Problem Statement
+## Problem statement
 
-Analyze the left-hand and right-hand limits of
-
-$$
-f(x)=\frac1{x-2}
-$$
-
-as $x\to2$. Determine whether the two-sided limit exists, interpret the one-sided behavior on a sketch of the graph, and identify the vertical asymptote.
-
-## Step-by-Step Solution
-
-### Step 1 — Approach $2$ from the left
-
-When $x<2$, the denominator $x-2$ is negative. As $x$ approaches $2$ from the left, that denominator approaches $0$ through negative values, so its reciprocal decreases without bound:
+For
 
 $$
-\lim_{x\to2^-}\frac1{x-2}=-\infty.
+f(x)=\frac1{x-2},
 $$
 
-### Step 2 — Approach $2$ from the right
+analyze the left-hand and right-hand limits as $x\to2$, determine whether the two-sided limit exists, and identify the vertical asymptote.
 
-When $x>2$, the denominator is positive. As $x$ approaches $2$ from the right, it approaches $0$ through positive values, so the reciprocal grows without bound:
+## Named quantities
 
-$$
-\lim_{x\to2^+}\frac1{x-2}=+\infty.
-$$
+- $d=x-2$ is the signed distance from $2$.
+- $L^-$ is the left-hand limit.
+- $L^+$ is the right-hand limit.
 
-### Step 3 — Decide whether the two-sided limit exists
+## Step 1 - Left-hand limit
 
-The one-sided limits do not agree: one is negative unbounded growth and the other is positive unbounded growth. Therefore the two-sided limit does not exist.
+**One-sided sign rule.** As $x\to2^-$, $d<0$ and $d\to0$, so $1/d\to-\infty$. As $x\to2^+$, $d>0$ and $d\to0$, so $1/d\to+\infty$.
 
-### Step 4 — Interpret the graph
-
-The line $x=2$ is a vertical asymptote. On a sketch, the branch to the left of $x=2$ falls toward $-\infty$, while the branch to the right rises toward $+\infty$.
-
-![Graph of f(x)=1/(x-2), showing the vertical asymptote x=2 and opposite one-sided behavior](./figures/exercise_09_vertical_asymptote.svg)
-
-## Final Answer
+For $x<2$ sufficiently close to $2$, $x-2$ is negative with magnitude approaching zero:
 
 $$
-\lim_{x\to2^-}\frac1{x-2}=-\infty,
+L^-=\lim_{x\to2^-}\frac1{x-2}=-\infty.
+$$
+
+## Step 2 - Right-hand limit
+
+For $x>2$, $x-2$ is positive and approaches zero:
+
+$$
+L^+=\lim_{x\to2^+}\frac1{x-2}=+\infty.
+$$
+
+## Step 3 - Compare the one-sided limits
+
+Because $L^-\neq L^+$, the two-sided limit does not exist.
+
+## Verification
+
+At $x=1.999$, $f(x)=1/(-0.001)=-1000$. At $x=2.001$, $f(x)=1/0.001=1000$. The signs confirm the upward and downward behavior.
+
+## Interpretation
+
+The line $x=2$ is a vertical asymptote. The left branch decreases without bound, while the right branch increases without bound.
+
+## Final answer
+
+$$
+\lim_{x\to2^-}f(x)=-\infty,
 \qquad
-\lim_{x\to2^+}\frac1{x-2}=+\infty.
+\lim_{x\to2^+}f(x)=+\infty.
 $$
 
 The two-sided limit does not exist, and the vertical asymptote is $x=2$.
-
-## Key Takeaways
-
-- A two-sided limit exists only when the two one-sided limits agree.
-- The sign of a denominator approaching zero determines the direction of unbounded growth.

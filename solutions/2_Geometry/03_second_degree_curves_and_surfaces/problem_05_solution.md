@@ -1,6 +1,6 @@
-# Solution 5 — Hyperbola and Asymptotes
+# Solution 5 - Hyperbola and Asymptotes
 
-## Problem Statement
+## Problem statement
 
 For
 
@@ -8,43 +8,93 @@ $$
 \frac{x^2}{16}-\frac{y^2}{9}=1,
 $$
 
-find the $x$-intercepts and asymptotes, and describe a sketch and the far-from-center behavior.
+find the $x$-axis intercepts and asymptotes, and describe a sketch.
 
-## Objective
+## Lettered quantities
 
-Read the orientation and asymptotes of a hyperbola from canonical form.
+- Let $a>0$ and $b>0$ denote the hyperbola semiaxis and asymptote parameter.
 
-## Concepts and Formulas
+## Step 1 - Read
 
-For $x^2/a^2-y^2/b^2=1$, the hyperbola is centered at the origin, opens along the $x$-axis, has vertices $(\pm a,0)$, and asymptotes $y=\pm(b/a)x$.
+**Hyperbola form.** In $x^2/a^2-y^2/b^2=1$, $a^2$ and $b^2$ are denominators of the positive and negative squared terms. Read:
+ $a$ and $b$
 
-## Step-by-Step Solution
-
-Here $a=4$ and $b=3$. Set $y=0$ to find the $x$-intercepts:
-
-$$
-\frac{x^2}{16}=1,
-\qquad
-x=\pm4.
-$$
-
-Thus the intercepts are $(4,0)$ and $(-4,0)$. The asymptotes are
+Because $16=4^2$ and $9=3^2$,
 
 $$
-y=\pm\frac{3}{4}x
+a=4,\qquad b=3.
 $$
 
-The sketch has two branches opening to the right and left from the vertices. Far from the center, the constant $1$ is small in comparison with the squared terms, so the equation is approximated by $x^2/16-y^2/9=0$. Factoring that relation gives the two asymptote lines, explaining why the branches approach them.
+## Step 2 - Find
+
+**Intercept condition.** Set $y=0$ to find real $x$-axis intersections:
+ the $x$-axis intercepts
+
+Set $y=0$:
+
+$$
+\frac{x^2}{16}=1.
+$$
+
+Thus
+
+$$
+x^2=16,\qquad x=\pm4.
+$$
+
+The intercepts, also called vertices, are $(4,0)$ and $(-4,0)$.
+
+## Step 3 - Find
+
+**Asymptote property.** The right-left hyperbola $x^2/a^2-y^2/b^2=1$ has asymptotes $y=\pm(b/a)x$, obtained from balancing the two leading squared terms. Substitute:
+ the asymptotes
+
+Substitute $a=4$ and $b=3$ into the asymptote formula:
+
+$$
+y=\pm\frac{3}{4}x.
+$$
+
+## Step 4 - Explain the far-field behavior
+
+For $|x|$ and $|y|$ large, the constant $1$ is insignificant compared with $x^2/16$ and $y^2/9$. The limiting equation is therefore
+
+$$
+\frac{x^2}{16}-\frac{y^2}{9}=0.
+$$
+
+Multiplying by $144$ gives
+
+$$
+9x^2-16y^2=0.
+$$
+
+This factors as
+
+$$
+(3x-4y)(3x+4y)=0,
+$$
+
+so $y=3x/4$ or $y=-3x/4$, exactly the asymptotes.
 
 ## Verification
 
-The vertices satisfy the equation: at $(\pm4,0)$ the left side is $16/16=1$. Setting the constant to zero yields $y^2=(9/16)x^2$, or the stated pair of lines.
+At $(4,0)$,
 
-## Final Answer
+$$
+\frac{16}{16}-\frac0{9}=1.
+$$
 
-The $x$-intercepts are $(\pm4,0)$, and the asymptotes are $y=\pm3x/4$. The branches open left and right and approach those lines at large distance.
+At $(-4,0)$, the same calculation is obtained. No $y$-axis point satisfies the equation because $x=0$ would give $-y^2/9=1$, which is impossible.
 
-## Key Takeaways
+## Geometric interpretation
 
-- The positive squared term identifies the hyperbola's opening axis.
-- Asymptotes describe the limiting direction of the branches, not points the curve must reach.
+The two branches open left and right. They meet no $y$-axis point and approach the diagonal lines as their distance from the center becomes large.
+
+## Final answer
+
+The vertices are $(\pm4,0)$ and the asymptotes are
+
+$$
+y=\pm\frac34x.
+$$

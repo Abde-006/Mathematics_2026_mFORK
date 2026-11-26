@@ -1,50 +1,78 @@
 ## Exercise 9 — Cross Product as a Perpendicular Direction
 
-### Problem Statement
-For $u=(1,2,0)$ and $v=(0,1,3)$, compute $u\times v$. Use dot products to verify perpendicularity to both vectors, compute $v\times u$, and compare the results.
+### Problem statement
 
-### Objective
-Compute a cross product, verify its perpendicularity, and observe the effect of reversing its order.
+For $u=(1,2,0)$ and $v=(0,1,3)$:
 
-### Concepts and Formulas
-- In $\mathbb R^3$, the cross product is perpendicular to both input vectors.
-- Reversing the order changes its sign: $v\times u=-(u\times v)$.
+1. Compute $u\times v$.
+2. Use dot products to check that it is perpendicular to both vectors.
+3. Compute $v\times u$ and compare the results.
 
-### Step-by-Step Solution
+### Formula used
 
-#### Step 1 — Compute the cross product
+For $u=(u_1,u_2,u_3)$ and $v=(v_1,v_2,v_3)$,
 
 $$
-u\times v=(2\cdot3-0\cdot1,\;0\cdot0-1\cdot3,\;1\cdot1-2\cdot0)=(6,-3,1)
+u\times v
+=
+(u_2v_3-u_3v_2,\,
+u_3v_1-u_1v_3,\,
+u_1v_2-u_2v_1)
 $$
 
-#### Step 2 — Check it is perpendicular to each vector
+The result is perpendicular to both inputs. Reversing the order gives
+
+$$
+v\times u=-u\times v
+$$
+
+so changing the order reverses the direction of the cross product.
+
+### Solution
+
+Apply the formula:
+
+$$
+\begin{aligned}
+u\times v
+&=(2(3)-0(1),\,0(0)-1(3),\,1(1)-2(0)) \\
+&=(6,-3,1)
+\end{aligned}
+$$
+
+Check perpendicularity to $u$:
 
 $$
 (u\times v)\cdot u=(6,-3,1)\cdot(1,2,0)=6-6+0=0
 $$
 
+Check perpendicularity to $v$:
+
 $$
 (u\times v)\cdot v=(6,-3,1)\cdot(0,1,3)=0-3+3=0
 $$
 
-#### Step 3 — Reverse the order
+Both dot products are zero, so $(6,-3,1)$ is perpendicular to both input vectors.
+
+Now reverse the order:
 
 $$
-v\times u=(-6,3,-1)=-(6,-3,1)=-(u\times v)
+v\times u
+=(-6,3,-1)
+=-(6,-3,1)
+=-(u\times v)
 $$
 
-### Verification
-Both dot products are zero, confirming perpendicularity. The reversed cross product is the negative of the original.
+### Geometric interpretation
 
-### Final Answer
+The cross product selects a perpendicular direction determined by the right-hand rule. Reversing $u$ and $v$ reverses that direction.
+
+### Final answer
 
 $$
-u\times v=(6,-3,1),\qquad v\times u=(-6,3,-1)
+u\times v=(6,-3,1)
 $$
 
-The cross product gives a perpendicular direction, and reversing the inputs reverses its orientation.
-
-### Key Takeaways
-- Dot products provide a direct check that a cross product is perpendicular.
-- The cross product is anti-commutative: reversing the inputs changes the sign.
+$$
+v\times u=(-6,3,-1)
+$$

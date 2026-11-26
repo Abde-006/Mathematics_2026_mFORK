@@ -1,46 +1,68 @@
 ## Exercise 2 — Distance as the Length of a Vector
 
-### Problem Statement
-For $A=(1,2,3)$ and $B=(4,-2,6)$, construct $\overrightarrow{AB}$, compute its length, calculate the distance between the points using the coordinate formula, and explain why the results agree.
+### Problem statement
 
-### Objective
-Connect the distance between two points to the length of their difference vector.
+For $A=(1,2,3)$ and $B=(4,-2,6)$:
 
-### Concepts and Formulas
-- The vector from $A$ to $B$ is $\overrightarrow{AB}=B-A$.
-- The length of $(x,y,z)$ is $\sqrt{x^2+y^2+z^2}$.
-- The distance formula is the length of the coordinate difference.
+1. Construct $\overrightarrow{AB}$.
+2. Compute its length.
+3. Compute the distance using the coordinate formula.
+4. Explain why both calculations give the same result.
 
-### Step-by-Step Solution
+### Formula used
 
-#### Step 1 — Construct the displacement vector
+The displacement vector from $A$ to $B$ is
 
 $$
-\overrightarrow{AB}=B-A=(4-1,-2-2,6-3)=(3,-4,3)
+\overrightarrow{AB}=B-A
 $$
 
-#### Step 2 — Find its length
+The length of a vector $(x,y,z)$ is
 
 $$
-\|\overrightarrow{AB}\|=\sqrt{3^2+(-4)^2+3^2}=\sqrt{9+16+9}=\sqrt{34}
+\|(x,y,z)\|=\sqrt{x^2+y^2+z^2}
 $$
 
-#### Step 3 — Apply the point-distance formula
+The point-distance formula is exactly the length of this displacement.
+
+### Solution
+
+Subtract the coordinates of $A$ from those of $B$:
 
 $$
-d(A,B)=\sqrt{(4-1)^2+(-2-2)^2+(6-3)^2}
-=\sqrt{9+16+9}=\sqrt{34}
+\overrightarrow{AB}
+=(4-1,-2-2,6-3)
+=(3,-4,3)
 $$
 
-### Verification
-The point-distance formula squares the coordinates of $B-A$. It therefore computes exactly the length of $\overrightarrow{AB}$, and both methods give $\sqrt{34}$.
-
-### Final Answer
+Now apply the length formula:
 
 $$
-\overrightarrow{AB}=(3,-4,3),\qquad \|\overrightarrow{AB}\|=d(A,B)=\sqrt{34}
+\|\overrightarrow{AB}\|
+=\sqrt{3^2+(-4)^2+3^2}
+=\sqrt{9+16+9}
+=\sqrt{34}
 $$
 
-### Key Takeaways
-- A point difference is a vector displacement.
-- The distance between two points is the length of that displacement.
+The coordinate distance formula gives
+
+$$
+d(A,B)
+=\sqrt{(4-1)^2+(-2-2)^2+(6-3)^2}
+=\sqrt{9+16+9}
+=\sqrt{34}
+$$
+
+### Explanation
+
+The coordinate formula squares the three components of $B-A$. The length formula also squares all three components of $\overrightarrow{AB}$. Therefore they perform the same calculation.
+
+### Final answer
+
+$$
+\overrightarrow{AB}=(3,-4,3)
+$$
+
+$$
+\|\overrightarrow{AB}\|=d(A,B)=\sqrt{34}
+$$

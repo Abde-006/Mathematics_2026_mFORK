@@ -1,42 +1,84 @@
-## Exercise 7 — A Line Relative to a Plane
+# Exercise 7 — A Line Relative to a Plane
 
-### Problem Statement
+## Problem Statement
+
 For
 
 $$
-L:(x,y,z)=(1,1,0)+t(1,-1,0),\qquad \Pi:x+y+z=2,
+L:(x,y,z)=(1,1,0)+t(1,-1,0),
+\qquad
+\Pi:x+y+z=2,
 $$
 
-determine whether the line intersects the plane at one point, is parallel to it, or lies in it. Explain the role of the direction-normal dot product.
+determine whether $L$ intersects $\Pi$ at one point, is parallel to $\Pi$, or lies in $\Pi$. Explain the role of $v\cdot n$.
 
-### Objective
-Apply the direction-vector and plane-normal test to classify a line relative to a plane.
+## Lettered Quantities
 
-### Concepts and Formulas
-- The plane normal is the coefficient vector of its equation.
-- If line direction $v$ satisfies $n\cdot v\neq0$, the line meets the plane once.
-- If $n\cdot v=0$, the line is parallel to the plane or contained in it; test a point on the line to distinguish these cases.
+- Let $p=(1,1,0)$ be a point on $L$.
+- Let $v=(1,-1,0)$ be the direction vector of $L$.
+- Let $n=(1,1,1)$ be the normal of $\Pi$.
+- Let $d=2$ be the plane constant.
 
-### Step-by-Step Solution
+## Step 1 — Test the Direction-Normal Dot Product
 
-#### Step 1 — Test the direction
-The plane normal is $n=(1,1,1)$ and the line direction is $v=(1,-1,0)$. Their dot product is
+**Line-plane dot-product test.** Substituting $X=p+t v$ into $n\cdot X=d$ gives $n\cdot p+t(n\cdot v)=d$. The coefficient $n\cdot v$ tells whether $t$ can change the signed position in the normal direction. Thus use $v=(1,-1,0)$ and $n=(1,1,1)$:
+
+Compute
 
 $$
-n\cdot v=1-1+0=0.
+\begin{aligned}
+n\cdot v
+&=(1,1,1)\cdot(1,-1,0) \\
+&=(1)(1)+(1)(-1)+(1)(0) \\
+&=1-1+0 \\
+&=0.
+\end{aligned}
 $$
 
-Thus motion along the line does not change the plane's left-hand side, so the line is parallel to the plane or contained in it.
+A zero dot product means $v$ is parallel to $\Pi$. It does not yet distinguish containment from a disjoint parallel line.
 
-#### Step 2 — Test the line's base point
-The base point is $p=(1,1,0)$. It satisfies $1+1+0=2$, so it lies on the plane. Since one point of this parallel line is in the plane, the whole line is in the plane.
+## Step 2 — Test a Point on the Line
 
-### Verification
-At every point of the line, $x+y+z=(1+t)+(1-t)+0=2$. This confirms that every line point satisfies the plane equation.
+**Point membership test.** When $n\cdot v=0$, choose a point $X=p$ on $L$ and test $n\cdot p=d$: membership of one point plus parallelism determines whether the line lies in the plane. Substitute
 
-### Final Answer
-The line lies in the plane.
+For $p=(1,1,0)$,
 
-### Key Takeaways
-- A zero dot product means the line's direction is parallel to the plane.
-- A single point substitution then distinguishes containment from a disjoint parallel line.
+$$
+n\cdot p=(1,1,1)\cdot(1,1,0)=1+1+0=2=d.
+$$
+
+Therefore $p$ lies in $\Pi$.
+
+## Step 3 — Check Every Point
+
+**Criterion reminder.** If $n\cdot v=0$ and $n\cdot p=d$, every point $p+t v$ satisfies the plane equation. This is the containment case;
+
+Since $n\cdot v=0$,
+
+$$
+n\cdot(p+t v)=n\cdot p+t(n\cdot v)=2+t(0)=2
+$$
+
+for every $t$. Thus every point on $L$ satisfies the plane equation.
+
+## Verification
+
+In coordinates,
+
+$$
+x=1+t,\qquad y=1-t,\qquad z=0.
+$$
+
+Therefore
+
+$$
+x+y+z=(1+t)+(1-t)+0=2.
+$$
+
+## Geometric Interpretation
+
+The line direction $(1,-1,0)$ has no normal component, so movement along $L$ leaves the plane equation unchanged. Since $p$ is on the plane, the entire line lies in it.
+
+## Final Answer
+
+The line lies in the plane $x+y+z=2$.

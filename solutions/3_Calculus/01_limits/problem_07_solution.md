@@ -1,48 +1,48 @@
-# Exercise 7 — Limit at a Point and Canceling a Factor
+# Problem 7. Limit at a Point and Canceling a Factor
 
-## Problem Statement
+## Problem statement
 
-Compute the limit and explain why the value of the function at $x=3$ is not needed to determine it.
+Compute
 
 $$
 \lim_{x\to3}\frac{x^2-4x+3}{x-3}.
 $$
 
-## Step-by-Step Solution
+## Named quantities
 
-### Step 1 — Factor the numerator
+- $x$ is the independent variable.
+- $P(x)=x^2-4x+3=(x-1)(x-3)$ is the numerator.
+- $D(x)=x-3$ is the denominator.
+- $L$ is the limit.
 
-Find two numbers with product $3$ and sum $-4$, namely $-1$ and $-3$:
+## Step 1 - Factor and cancel
 
-$$
-x^2-4x+3=(x-1)(x-3).
-$$
-
-### Step 2 — Cancel the common factor near $x=3$
-
-For $x\ne3$, cancel the factor $x-3$:
+**Limit after cancellation.** For $x\neq c$, an algebraic factor common to numerator and denominator may be canceled. The limit concerns values arbitrarily close to $c$, not necessarily the value at $c$.
 
 $$
 \frac{x^2-4x+3}{x-3}
 =\frac{(x-1)(x-3)}{x-3}
-=x-1.
+=x-1,\qquad x\neq3.
 $$
 
-The original quotient is undefined at $x=3$, but a limit concerns values arbitrarily close to $3$, not necessarily the value at $3$ itself.
+## Step 2 - Take the limit
 
-### Step 3 — Take the limit of the simplified expression
-
-$$
-\lim_{x\to3}(x-1)=3-1=2.
-$$
-
-## Final Answer
+The original and simplified expressions agree for every $x\neq3$, so
 
 $$
-\lim_{x\to3}\frac{x^2-4x+3}{x-3}=2.
+L=\lim_{x\to3}(x-1)=3-1=2.
 $$
 
-## Key Takeaways
+## Verification
 
-- Canceling a factor is valid in a punctured neighborhood where that factor is nonzero.
-- The limit can exist even when the original function is undefined at the limiting point.
+At $x=3.01$, the quotient equals $2.01$, and at $x=2.99$ it equals $1.99$. Both sides approach $2$.
+
+## Interpretation
+
+The original function is undefined at $x=3$, but nearby values determine the limit. The graph is the line $y=x-1$ with a hole at $(3,2)$.
+
+## Final answer
+
+$$
+2
+$$

@@ -1,49 +1,105 @@
-# Solution 7 — Classifying a Second-Degree Equation
+# Solution 7 - Classifying a Second-Degree Equation
 
-## Problem Statement
+## Problem statement
 
-Classify the objects described by
+Determine the type of object described by:
 
 1. $4x^2+9y^2=36$,
 2. $x^2-y^2=1$,
 3. $x^2-4y=0$,
 4. $x^2+y^2+1=0$.
 
-Explain why the final equation has no real points.
+In the last case, explain why no real point exists.
 
-## Objective
+## Lettered quantities and recognition rules
 
-Recognize basic conics by their squared terms and determine whether real solutions exist.
+Let $a,b>0$. Recognition uses these canonical forms:
 
-## Concepts and Formulas
+$$
+\frac{x^2}{a^2}+\frac{y^2}{b^2}=1
+$$
 
-Two positive squared terms with a positive constant give an ellipse after normalization. A difference of squared terms gives a hyperbola. A squared variable equal to a linear variable gives a parabola. For real numbers, $x^2+y^2\ge0$.
+This sign pattern describes an ellipse.
 
-## Step-by-Step Solution
+$$
+\frac{x^2}{a^2}-\frac{y^2}{b^2}=1
+$$
 
-1. Divide the first equation by $36$:
+This sign pattern describes a horizontal hyperbola.
+
+$$
+x^2=4py
+$$
+
+This sign pattern describes a parabola.
+
+where $p$ is positive for an upward-opening parabola and negative for a downward-opening one.
+
+## Step 1 - $4x^2+9y^2=36$
+
+Divide by $36$:
+
+$$
+\frac{4x^2}{36}+\frac{9y^2}{36}=1,
+$$
+
+which is
 
 $$
 \frac{x^2}{9}+\frac{y^2}{4}=1.
 $$
 
-This is an ellipse centered at the origin, with semiaxes $3$ and $2$.
+The equation is an ellipse centered at $(0,0)$ with semiaxes $a=3$ and $b=2$.
 
-2. The difference $x^2-y^2=1$ is a hyperbola centered at the origin, opening along the $x$-axis. Its vertices are $(\pm1,0)$.
+## Step 2 - $x^2-y^2=1$
 
-3. Rearrange $x^2-4y=0$ as $x^2=4y$. This is an upward-opening parabola with vertex $(0,0)$.
+The equation already has the form
 
-4. The equation requires $x^2+y^2=-1$. Its left side is nonnegative for all real $x,y$, so it cannot equal $-1$. There are no real points.
+$$
+\frac{x^2}{1}-\frac{y^2}{1}=1.
+$$
+
+It is therefore a hyperbola centered at $(0,0)$ with $a=b=1$. It opens along the $x$-axis and has vertices $(\pm1,0)$.
+
+## Step 3 - $x^2-4y=0$
+
+Rearrange:
+
+$$
+x^2=4y.
+$$
+
+Comparing with $x^2=4py$ gives $4p=4$, so $p=1$. The object is a parabola with vertex $(0,0)$, axis $y=0$, and upward opening.
+
+## Step 4 - $x^2+y^2+1=0$
+
+Rearrange to
+
+$$
+x^2+y^2=-1.
+$$
+
+For real $x$ and $y$,
+
+$$
+x^2\ge0,\qquad y^2\ge0,
+$$
+
+and consequently
+
+$$
+x^2+y^2\ge0.
+$$
+
+Its smallest possible value is $0$, attained at $(0,0)$, so it can never equal $-1$. Therefore the equation has no real points.
 
 ## Verification
 
-The first three equations match standard canonical forms. For the fourth, the minimum possible value of $x^2+y^2$ is $0$, attained at the origin, which confirms that a value of $-1$ is impossible.
+The first three equations match canonical conic forms after normalization or rearrangement. The fourth cannot be satisfied because a sum of real squares cannot be negative.
 
-## Final Answer
+## Final answer
 
-The objects are, respectively, an ellipse, a horizontal hyperbola, and an upward-opening parabola. The fourth equation has no real locus.
-
-## Key Takeaways
-
-- Check signs and whether the equation can be satisfied over the real numbers.
-- A formally recognizable quadratic equation need not describe a nonempty real curve.
+1. An ellipse, $\frac{x^2}{9}+\frac{y^2}{4}=1$.
+2. A horizontal hyperbola, $x^2-y^2=1$.
+3. An upward-opening parabola, $x^2=4y$.
+4. No real curve or set of real points.

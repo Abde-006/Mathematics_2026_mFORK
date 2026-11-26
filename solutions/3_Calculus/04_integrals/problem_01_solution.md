@@ -1,19 +1,35 @@
-## Question
+# Problem 1. Antiderivative and Verification
 
-For $f(x)=3x^2-4x+5$, find one antiderivative and the entire family, verify it by differentiation, and explain the constant $C$.
+## Problem
+
+For $f(x)=3x^2-4x+5$, find one antiderivative $F(x)$ and the entire family, verify, and explain $C$.
 
 ## Solution
 
-Integrating term by term with the power rule gives
+Let $f(x)=3x^2-4x+5$. Integration is the inverse of differentiation.
 
-$$F(x)=x^3-2x^2+5x$$
+### Step 1 - Integrate term by term
 
-as one antiderivative. The full family is
+The power rule $\int x^n\,dx=\frac{x^{n+1}}{n+1}+C$, for $n\neq-1$, reverses differentiation. It applies to $3x^2$, $-4x$, and $5$ because their exponents are $2$, $1$, and $0$.
 
-$$F(x)=x^3-2x^2+5x+C,\qquad C\in\mathbb R.$$
+$$
+F(x)=x^3-2x^2+5x.
+$$
 
-Differentiation verifies the result:
+### Step 2 - Entire family
 
-$$F'(x)=3x^2-4x+5=f(x).$$
+$$
+F(x)=x^3-2x^2+5x+C,\qquad C\in\mathbb R.
+$$
 
-The constant appears because every constant has derivative zero. Thus any two antiderivatives of the same function on an interval differ by a constant.
+### Verification
+
+$$
+F'(x)=3x^2-4x+5=f(x).
+$$
+
+$C$ represents all vertical translations of the same antiderivative, since constants differentiate to zero.
+
+## Final Answer
+
+One antiderivative is $x^3-2x^2+5x$; the family is $x^3-2x^2+5x+C$.

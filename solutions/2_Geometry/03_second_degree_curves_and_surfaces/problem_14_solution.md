@@ -1,50 +1,138 @@
-# Solution 14 — Cone and Cylinder
+# Solution 14 - Cone and Cylinder
 
-## Problem Statement
+## Problem statement
 
 Compare
 
 $$
-x^2+y^2=z^2,
-\qquad
+x^2+y^2=z^2
+$$
+
+and
+
+$$
 x^2+y^2=4.
 $$
 
-For each surface, describe the sections $z=c$, $x=0$, and $y=0$, and give a qualitative sketch.
+For each surface, describe the cross-sections $z=c$, $x=0$, and $y=0$, and explain the difference in horizontal radii.
 
-## Objective
+## Lettered quantities
 
-Distinguish a cone from a cylinder by tracking how horizontal sections change with height.
+- Let $c$ denote a fixed height and $r$ the radius of a horizontal section.
 
-## Concepts and Formulas
+## Surface 1 - $x^2+y^2=z^2$
 
-An equation $x^2+y^2=R^2$ at fixed $z$ describes a circle of radius $R$. In a vertical coordinate plane, setting one horizontal coordinate to zero reveals the section curve.
+**Horizontal-section rule.** Substitute $z=c$; the radius is real when $c^2\ge0$ and equals $|c|$ because $x^2+y^2=c^2$. Apply:
+ - $x^2+y^2=z^2$
 
-## Step-by-Step Solution
+### Section $z=c$
 
-### Surface 1: $x^2+y^2=z^2$
+Substitute $z=c$:
 
-At $z=c$, the equation is $x^2+y^2=c^2$, a circle of radius $|c|$. At $c=0$ it is only the origin; the radius grows linearly with distance above or below that height.
+$$
+x^2+y^2=c^2.
+$$
 
-At $x=0$, the section is $y^2=z^2$, which factors as $(y-z)(y+z)=0$ and gives the two lines $y=z$ and $y=-z$ in the $yz$-plane. At $y=0$, the section is $x^2=z^2$, giving $x=z$ and $x=-z$ in the $xz$-plane.
+At $c\ne0$, the section is a circle of radius $|c|$. At $c=0$, the section is only $(0,0,0)$. The radius grows linearly with the distance from $z=0$.
 
-The sketch is a double cone with vertex at the origin and axis the $z$-axis. Its two nappes widen as $|z|$ increases.
+### Section $x=0$
 
-### Surface 2: $x^2+y^2=4$
+Substitute $x=0$:
 
-At every height $z=c$, the section is the same circle $x^2+y^2=4$, of radius $2$. At $x=0$, the equation gives $y=2$ or $y=-2$, with $z$ free; these are two vertical lines. At $y=0$, it gives $x=2$ or $x=-2$, again with $z$ free.
+$$
+y^2=z^2.
+$$
 
-The sketch is a circular cylinder of radius $2$ extending indefinitely in both directions along the $z$-axis. Its horizontal radius does not depend on $z$ because $z$ does not appear in its equation.
+Factoring,
+
+$$
+(y-z)(y+z)=0,
+$$
+
+gives the lines
+
+$$
+y=z,\qquad y=-z
+$$
+
+in the $yz$-plane.
+
+### Section $y=0$
+
+Substitute $y=0$:
+
+$$
+x^2=z^2,
+$$
+
+so
+
+$$
+x=z,\qquad x=-z
+$$
+
+are the two lines in the $xz$-plane.
+
+The surface is a double cone with vertex $(0,0,0)$ and axis $Oz$. Its upper and lower nappes widen linearly away from the vertex.
+
+## Surface 2 - $x^2+y^2=4$
+
+**Constant-cylinder section rule.** The equation contains no $z$, so every horizontal plane $z=c$ has the same circular trace of radius $2$:
+ - $x^2+y^2=4$
+
+### Section $z=c$
+
+Because $z$ does not occur in the equation, substitution of $z=c$ leaves
+
+$$
+x^2+y^2=4
+$$
+
+for every $c$. The radius is therefore always $r=2$, independent of height.
+
+### Section $x=0$
+
+Substitute $x=0$:
+
+$$
+y^2=4,
+$$
+
+so
+
+$$
+y=2,\qquad y=-2.
+$$
+
+These are two vertical lines parallel to the $Oz$ axis.
+
+### Section $y=0$
+
+Substitute $y=0$:
+
+$$
+x^2=4,
+$$
+
+so
+
+$$
+x=2,\qquad x=-2.
+$$
+
+These are another pair of vertical lines parallel to the $Oz$ axis.
+
+The surface is a circular cylinder of radius $2$, extending along the $z$ direction.
 
 ## Verification
 
-For the first surface, substituting $z=c$ gives squared radius $c^2$. For the second, substituting any $c$ leaves squared radius $4$. The vertical sections also follow by direct substitution.
+For the cone, the squared horizontal radius is $c^2$, so $r=|c|$. For the cylinder, the squared horizontal radius remains $4$, so $r=2$ at every height.
 
-## Final Answer
+## Geometric interpretation
 
-The first surface is a double cone whose horizontal radius is $|z|$. The second is a cylinder whose horizontal radius is always $2$.
+The cone's radius varies because $z$ appears in the radial equation. The cylinder's radius is constant because $z$ does not appear at all.
 
-## Key Takeaways
+## Final answer
 
-- A variable radius in horizontal sections signals a cone-like surface.
-- If the axis variable is absent from the equation, the same cross-section repeats along that axis.
+- $x^2+y^2=z^2$ is a double cone. Its horizontal radius is $|z|$, and the $x=0$ and $y=0$ sections are pairs of lines.
+- $x^2+y^2=4$ is a circular cylinder of radius $2$. Every horizontal section is the same circle, and the coordinate vertical sections are vertical line pairs.

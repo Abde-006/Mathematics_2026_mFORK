@@ -1,52 +1,82 @@
 ## Exercise 6 — Projection and Perpendicular Component
 
-### Problem Statement
-Find the projection of $u=(4,2)$ onto the direction $v=(1,1)$. Then compute $r=u-\mathrm{proj}_v\,u$, verify that $r\cdot v=0$, and interpret the result geometrically.
+### Problem statement
 
-### Objective
-Decompose a vector into its part parallel to a given direction and its perpendicular remainder.
+For $u=(4,2)$ and $v=(1,1)$, find the projection of $u$ onto $v$, then compute $r=u-\mathrm{proj}_v u$ and verify $r\cdot v=0$. Explain the result geometrically.
 
-### Concepts and Formulas
-- The projection of $u$ onto nonzero $v$ is $\mathrm{proj}_v\,u=\frac{u\cdot v}{v\cdot v}v$.
-- Subtracting the projection leaves a component perpendicular to $v$.
+### Formula used
 
-### Step-by-Step Solution
-
-#### Step 1 — Calculate the projection coefficient
+The projection onto a nonzero direction $v$ is
 
 $$
-u\cdot v=4(1)+2(1)=6,\qquad v\cdot v=1^2+1^2=2
+\mathrm{proj}_v u
+=\frac{u\cdot v}{v\cdot v}v
 $$
 
-Thus the coefficient is $6/2=3$.
+The coefficient $(u\cdot v)/(v\cdot v)$ is used because it chooses the scalar multiple of $v$ that points in the correct direction along $v$.
 
-#### Step 2 — Find the projection and remainder
-
-$$
-\mathrm{proj}_v\,u=3(1,1)=(3,3)
-$$
+The perpendicular component is
 
 $$
-r=u-\mathrm{proj}_v\,u=(4,2)-(3,3)=(1,-1)
+r=u-\mathrm{proj}_v u
 $$
 
-#### Step 3 — Check perpendicularity
+It is perpendicular to $v$ because the projection accounts for every part of $u$ parallel to $v$.
+
+### Solution
+
+First compute the dot products:
+
+$$
+u\cdot v=4(1)+2(1)=6
+$$
+
+$$
+v\cdot v=1^2+1^2=2
+$$
+
+The projection coefficient is therefore
+
+$$
+\frac{u\cdot v}{v\cdot v}=\frac{6}{2}=3
+$$
+
+Multiply $v$ by this coefficient:
+
+$$
+\mathrm{proj}_v u=3(1,1)=(3,3)
+$$
+
+Subtract it from $u$:
+
+$$
+r=(4,2)-(3,3)=(1,-1)
+$$
+
+### Verification
+
+Check the perpendicularity:
 
 $$
 r\cdot v=(1,-1)\cdot(1,1)=1-1=0
 $$
 
-### Verification
-The result splits $u$ as $(3,3)+(1,-1)=(4,2)$, and the remainder has zero dot product with $v$.
-
-### Final Answer
+Therefore $r$ is perpendicular to $v$. The decomposition also reconstructs $u$:
 
 $$
-\mathrm{proj}_v\,u=(3,3),\qquad r=(1,-1)
+(3,3)+(1,-1)=(4,2)
 $$
 
-Geometrically, $(3,3)$ is the part of $u$ along the line in direction $v$, and $r$ is the perpendicular offset from that line to the tip of $u$.
+### Geometric interpretation
 
-### Key Takeaways
-- Projection extracts the component parallel to a direction.
-- The leftover component is perpendicular to that direction.
+The vector $(3,3)$ is the shadow of $u$ along the line spanned by $v$. The vector $(1,-1)$ is the perpendicular offset from that line to the tip of $u$.
+
+### Final answer
+
+$$
+\mathrm{proj}_v u=(3,3)
+$$
+
+$$
+r=(1,-1)
+$$

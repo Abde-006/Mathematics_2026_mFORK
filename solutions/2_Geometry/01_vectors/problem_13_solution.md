@@ -1,56 +1,89 @@
 ## Exercise 13 — Do Four Points Lie in One Plane?
 
-### Problem Statement
-Given $A=(0,0,0)$, $B=(1,2,0)$, $C=(0,1,1)$, and $D=(2,5,1)$, construct $\overrightarrow{AB}$ and $\overrightarrow{AC}$, find their cross product $n$, construct $\overrightarrow{AD}$, check $\overrightarrow{AD}\cdot n$, and decide whether $D$ lies in the plane determined by $A,B,C$.
+### Problem statement
 
-### Objective
-Use a normal vector and a dot-product test to determine whether a point lies in a plane.
-
-### Concepts and Formulas
-- Two direction vectors in the plane determine a normal through their cross product.
-- A displacement from a point in the plane lies in the plane exactly when it is perpendicular to the plane's normal.
-
-### Step-by-Step Solution
-
-#### Step 1 — Construct two directions in the plane
+Given
 
 $$
-\overrightarrow{AB}=B-A=(1,2,0),\qquad
+A=(0,0,0),\qquad B=(1,2,0),\qquad C=(0,1,1),\qquad D=(2,5,1)
+$$
+
+construct $\overrightarrow{AB}$ and $\overrightarrow{AC}$, find $n=\overrightarrow{AB}\times\overrightarrow{AC}$, construct $\overrightarrow{AD}$, and check $\overrightarrow{AD}\cdot n=0$. Decide whether $D$ lies in the plane determined by $A,B,C$, and justify the criterion.
+
+### Formula used
+
+Two nonparallel vectors from $A$,
+
+$$
+p=B-A,\qquad q=C-A
+$$
+
+span the plane through $A,B,C$. Their cross product
+
+$$
+n=p\times q
+$$
+
+is a normal vector. A point $D$ lies in the plane exactly when
+
+$$
+(D-A)\cdot n=0
+$$
+
+because $D-A$ must then be perpendicular to the normal and therefore parallel to a direction in the plane.
+
+### Solution
+
+Construct the first two plane directions:
+
+$$
+\overrightarrow{AB}=B-A=(1,2,0)
+$$
+
+$$
 \overrightarrow{AC}=C-A=(0,1,1)
 $$
 
-#### Step 2 — Find a normal vector
+Compute a normal:
 
 $$
-n=\overrightarrow{AB}\times\overrightarrow{AC}
-=(2\cdot1-0\cdot1,\;0\cdot0-1\cdot1,\;1\cdot1-2\cdot0)
-=(2,-1,1)
+\begin{aligned}
+n
+&=\overrightarrow{AB}\times\overrightarrow{AC} \\
+&=(2(1)-0(1),\,0(0)-1(1),\,1(1)-2(0)) \\
+&=(2,-1,1)
+\end{aligned}
 $$
 
-#### Step 3 — Test the fourth point
+Construct the displacement from $A$ to $D$:
 
 $$
 \overrightarrow{AD}=D-A=(2,5,1)
 $$
 
+Test it against the normal:
+
 $$
-\overrightarrow{AD}\cdot n=(2,5,1)\cdot(2,-1,1)=4-5+1=0
+\overrightarrow{AD}\cdot n
+=(2,5,1)\cdot(2,-1,1)
+=4-5+1
+=0
 $$
 
-Since this dot product is zero, $\overrightarrow{AD}$ lies in the plane's directions. In fact,
+Because the dot product is zero, $\overrightarrow{AD}$ is in a direction contained in the plane.
+
+This can also be verified directly:
 
 $$
 \overrightarrow{AD}=2\overrightarrow{AB}+\overrightarrow{AC}
+=2(1,2,0)+(0,1,1)
+=(2,5,1)
 $$
 
-which also directly shows that $D$ is reached by a combination of the two in-plane directions from $A$.
+### Final answer
 
-### Verification
-The normal test gives zero, and the explicit linear combination reproduces $(2,5,1)$. Both confirm that $D$ lies in the plane through $A,B,C$.
+$$
+n=(2,-1,1)
+$$
 
-### Final Answer
-$D$ lies in the plane determined by $A,B,C$ because $\overrightarrow{AD}\cdot n=0$ for $n=(2,-1,1)$.
-
-### Key Takeaways
-- A normal vector converts plane membership into a dot-product test.
-- An in-plane displacement can also be expressed as a combination of two in-plane directions.
+Since $\overrightarrow{AD}\cdot n=0$, $D$ lies in the plane determined by $A$, $B$, and $C$.

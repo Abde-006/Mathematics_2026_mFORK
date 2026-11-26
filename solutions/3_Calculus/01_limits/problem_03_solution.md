@@ -1,61 +1,65 @@
-# Exercise 3 — A Square Root and Removing an Indeterminate Form
+# Problem 3. A Square Root and Removing an Indeterminate Form
 
-## Problem Statement
+## Problem statement
 
-Compute the limit using the conjugate expression, and explain why multiplying by the conjugate removes the difficulty of subtracting two large, nearly equal quantities:
-
-$$
-\lim_{n\to\infty}\left(\sqrt{n^2+5n}-n\right)
-$$
-
-using the conjugate expression.
-
-## Step-by-Step Solution
-
-### Step 1 — Multiply by the conjugate
-
-The two terms inside the parentheses both grow like $n$, so their difference is not easy to read directly. Multiply by the conjugate and divide by the same expression:
+Compute
 
 $$
+\lim_{n\to\infty}\left(\sqrt{n^2+5n}-n\right).
+$$
+
+## Named quantities
+
+- $n$ is a positive integer.
+- $L$ is the requested limit.
+
+## Step 1 - Conjugate
+
+**Conjugate identity.**
+
+$$
+(\sqrt a-\sqrt b)(\sqrt a+\sqrt b)=a-b.
+$$
+
+Multiplication by $(\sqrt a+\sqrt b)/(\sqrt a+\sqrt b)$ can remove an apparent $\infty-\infty$ form.
+
+Because $n>0$, $\sqrt{n^2}=n$. Thus
+
+$$
+\begin{aligned}
 \sqrt{n^2+5n}-n
-=\frac{(\sqrt{n^2+5n}-n)(\sqrt{n^2+5n}+n)}
-{\sqrt{n^2+5n}+n}.
+&=\frac{(\sqrt{n^2+5n}-n)(\sqrt{n^2+5n}+n)}
+        {\sqrt{n^2+5n}+n} \\
+&=\frac{n^2+5n-n^2}{\sqrt{n^2+5n}+n} \\
+&=\frac{5n}{\sqrt{n^2+5n}+n}.
+\end{aligned}
 $$
 
-### Step 2 — Simplify using the difference of squares
+## Step 2 - Divide by $n$
 
-The numerator becomes $(n^2+5n)-n^2=5n$:
-
-$$
-\frac{(n^2+5n)-n^2}{\sqrt{n^2+5n}+n}
-=\frac{5n}{\sqrt{n^2+5n}+n}.
-$$
-
-Since $n>0$, factor $n$ from the denominator and cancel:
+For $n>0$,
 
 $$
-\frac{5n}{n\sqrt{1+\frac5n}+n}
-=\frac{5}{\sqrt{1+\frac5n}+1}.
+\frac{5n}{\sqrt{n^2+5n}+n}
+=\frac5{\sqrt{1+5/n}+1}.
 $$
 
-### Step 3 — Take the limit
-
-As $n\to\infty$, $\frac5n\to0$. Therefore
+As $n\to\infty$, $5/n\to0$, so
 
 $$
-\lim_{n\to\infty}\frac{5}{\sqrt{1+\frac5n}+1}
-=\frac5{\sqrt{1}+1}=\frac52.
+L=\frac5{\sqrt1+1}=\frac52.
 $$
 
-Conjugation replaces a difference of two large, nearly equal quantities with a quotient whose behavior is direct.
+## Verification
 
-## Final Answer
+At $n=100$, $\sqrt{10500}-100\approx2.4695$, and at $n=1000$ it is approximately $2.4969$. Both approach $2.5$.
+
+## Interpretation
+
+The conjugate reveals the difference $5n$ explicitly. The numerator grows like $5n$, while the denominator grows like $2n$, giving $5/2$.
+
+## Final answer
 
 $$
-\lim_{n\to\infty}\left(\sqrt{n^2+5n}-n\right)=\frac52.
+\frac52
 $$
-
-## Key Takeaways
-
-- Multiply by the conjugate to use the difference-of-squares identity.
-- Factor the dominant power before taking the limit.

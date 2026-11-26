@@ -1,52 +1,101 @@
-# Solution 13 — Intersection of a Sphere and a Plane
+# Solution 13 - Intersection of a Sphere and a Plane
 
-## Problem Statement
+## Problem statement
 
-Find the intersection of the sphere $x^2+y^2+z^2=25$ with the plane $z=3$ and give its radius. Describe the sections at $z=c$ for all values of $c$.
-
-## Objective
-
-Find planar sections of a sphere by substituting the fixed coordinate.
-
-## Concepts and Formulas
-
-A sphere centered at the origin with radius $R$ has equation $x^2+y^2+z^2=R^2$. At height $z=c$, the section satisfies $x^2+y^2=R^2-c^2$.
-
-## Step-by-Step Solution
-
-Substitute $z=3$:
+Given the sphere
 
 $$
-x^2+y^2+3^2=25,
-\qquad
+x^2+y^2+z^2=25
+$$
+
+and the plane $z=3$, find the equation of the intersection curve and its radius. Then describe the behavior for $z=c$.
+
+## Lettered quantities
+
+- Let $R=5$ denote the sphere radius and $c$ the plane height.
+
+## Step 1 - Substitute $z=3$
+
+**Sphere-plane section formula.** Substituting $z=c$ in $x^2+y^2+z^2=R^2$ gives $x^2+y^2=R^2-c^2$; real points require $R^2-c^2\ge0$. Apply $R=5,c=3$:
+ $z=3$
+
+The plane equation requires $z=3$ at every point of the intersection. Substitute into the sphere:
+
+$$
+x^2+y^2+3^2=25.
+$$
+
+Subtract $9$:
+
+$$
 x^2+y^2=16.
 $$
 
-The intersection is a circle centered at $(0,0,3)$ within the plane $z=3$, with radius $4$.
+Together with $z=3$, this is
 
-For a general height $z=c$:
+$$
+x^2+y^2=16,\qquad z=3.
+$$
+
+Therefore the intersection is a circle centered at $(0,0,3)$ with radius
+
+$$
+r=\sqrt{16}=4.
+$$
+
+## Step 2 - Analyze $z=c$
+
+**General fixed-height reminder.** The same section equation applies for any $c$:
+ the general height $z=c$
+
+Substitute $z=c$:
+
+$$
+x^2+y^2+c^2=25,
+$$
+
+so
 
 $$
 x^2+y^2=25-c^2.
 $$
 
-If $|c|<5$, the section is a circle of radius $\sqrt{25-c^2}$. At $c=5$ or $c=-5$, it is one point, respectively $(0,0,5)$ or $(0,0,-5)$. For $|c|>5$, there is no real intersection. The circles are largest at $c=0$ and shrink toward the two poles.
+The section is a circle of radius $\sqrt{25-c^2}$ when $|c|<5$. It is the point $(0,0,c)$ when $|c|=5$. It is empty when $|c|>5$.
+
+At $c=5$ the point is $(0,0,5)$, and at $c=-5$ it is $(0,0,-5)$.
 
 ## Verification
 
-Every point on the intersection circle has $x^2+y^2=16$ and $z^2=9$, so $x^2+y^2+z^2=16+9=25$. Its radius $4$ also follows from the right triangle with sphere radius $5$ and center-to-plane distance $3$: $4^2+3^2=5^2$.
+For a point in the intersection at $z=3$,
 
-## Final Answer
+$$
+x^2+y^2+z^2=16+9=25.
+$$
 
-The intersection at $z=3$ is
+This independently confirms every point on $x^2+y^2=16$ lies on the sphere.
+
+An alternative geometric calculation uses the right triangle formed by the sphere radius $R=5$, the center-to-plane distance $3$, and the intersection radius $r$:
+
+$$
+r^2+3^2=5^2,
+$$
+
+so
+
+$$
+r^2=25-9=16,\qquad r=4.
+$$
+
+## Geometric interpretation
+
+Horizontal sections are largest in the plane $z=0$, where $r=5$, and shrink as $|c|$ approaches $5$. The planes $z=\pm5$ meet the sphere only at the north and south poles.
+
+## Final answer
+
+The intersection with $z=3$ is
 
 $$
 x^2+y^2=16,\qquad z=3,
 $$
 
-a circle of radius $4$. At height $z=c$, the radius is $\sqrt{25-c^2}$ for $|c|<5$; the sections reduce to points at $c=\pm5$ and are empty for $|c|>5$.
-
-## Key Takeaways
-
-- Substituting the plane equation directly gives the intersection curve.
-- The sphere's horizontal sections shrink to points at its top and bottom.
+a circle of radius $4$. For height $z=c$, the radius is $\sqrt{25-c^2}$ when $|c|<5$, with point sections at $c=\pm5$ and no real section outside that range.

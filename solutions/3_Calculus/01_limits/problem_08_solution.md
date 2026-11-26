@@ -1,6 +1,6 @@
-# Exercise 8 — A Square Root in a Function Limit
+# Problem 8. A Square Root in a Function Limit
 
-## Problem Statement
+## Problem statement
 
 Compute
 
@@ -8,48 +8,56 @@ $$
 \lim_{x\to4}\frac{\sqrt{x}-2}{x-4}
 $$
 
-by rationalizing the numerator. Compare this method with the conjugate method used in Exercise 3 for the sequence limit.
+by rationalizing the numerator.
 
-## Step-by-Step Solution
+## Named quantities
 
-### Step 1 — Multiply by the conjugate
+- $x$ is the independent variable.
+- $L$ is the requested limit.
 
-Multiply the numerator and denominator by $\sqrt{x}+2$:
+## Step 1 - Rationalize
+
+**Rationalization identity.**
 
 $$
+(\sqrt{x}-2)(\sqrt{x}+2)=x-4.
+$$
+
+This identity transforms the numerator difference into the denominator factor $x-4$.
+
+For $x\ge0$ and $x\neq4$, multiply by $(\sqrt{x}+2)/(\sqrt{x}+2)$:
+
+$$
+\begin{aligned}
 \frac{\sqrt{x}-2}{x-4}
-\cdot\frac{\sqrt{x}+2}{\sqrt{x}+2}
-=\frac{(\sqrt{x}-2)(\sqrt{x}+2)}{(x-4)(\sqrt{x}+2)}.
+&=\frac{\sqrt{x}-2}{x-4}\cdot\frac{\sqrt{x}+2}{\sqrt{x}+2} \\
+&=\frac{x-4}{(x-4)(\sqrt{x}+2)} \\
+&=\frac1{\sqrt{x}+2}.
+\end{aligned}
 $$
 
-### Step 2 — Use the difference of squares
-
-The numerator is $x-4$, so for $x\ne4$ it cancels with the denominator factor:
+## Step 2 - Substitute $x=4$
 
 $$
-\frac{x-4}{(x-4)(\sqrt{x}+2)}
-=\frac1{\sqrt{x}+2}.
+L=\frac1{\sqrt4+2}=\frac14.
 $$
 
-### Step 3 — Take the limit
+## Verification
 
-The simplified expression is continuous at $x=4$, so substitute:
-
-$$
-\lim_{x\to4}\frac1{\sqrt{x}+2}
-=\frac1{\sqrt4+2}
-=\frac14.
-$$
-
-This uses the same conjugate idea as Exercise 3. There, conjugation exposed a factor of $n$ that could be canceled; here, it exposes the factor $x-4$.
-
-## Final Answer
+At $x=4.01$, $\sqrt{4.01}\approx2.002498$, so
 
 $$
-\lim_{x\to4}\frac{\sqrt{x}-2}{x-4}=\frac14.
+\frac{2.002498-2}{0.01}\approx0.2498.
 $$
 
-## Key Takeaways
+At $x=3.99$, the quotient is approximately $0.2502$. Both sides approach $1/4$.
 
-- Rationalization removes the square root from a difference in the numerator.
-- Simplifying away the indeterminate form makes direct substitution possible.
+## Interpretation
+
+The limit is the difference quotient for $\sqrt{x}$ at $x=4$. Geometrically, it is the tangent slope $1/(2\sqrt4)=1/4$.
+
+## Final answer
+
+$$
+\frac14
+$$

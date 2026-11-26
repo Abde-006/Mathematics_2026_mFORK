@@ -1,7 +1,8 @@
-## Exercise 5 — Relative Position of Two Lines
+# Exercise 5 — Relative Position of Two Lines
 
-### Problem Statement
-Analyze the lines
+## Problem Statement
+
+Analyze
 
 $$
 L_1:(x,y,z)=(1,1,0)+t(1,2,1),
@@ -13,45 +14,111 @@ $$
 
 If they intersect, give the intersection point. Otherwise determine whether they are parallel or skew.
 
-### Objective
-Classify two spatial lines by comparing their directions, testing for a common point, and checking coplanarity.
+## Lettered Quantities
 
-### Concepts and Formulas
-- Parallel lines have proportional direction vectors.
-- Intersecting lines have a common point.
-- Two nonparallel, nonintersecting lines in space are skew.
-- A coplanarity test for directions $u,v$ and displacement $w$ is $w\cdot(u\times v)=0$.
+- Let $p_1=(1,1,0)$ and $v_1=(1,2,1)$ define $L_1$.
+- Let $p_2=(2,0,1)$ and $v_2=(0,1,-1)$ define $L_2$.
+- Let $w=p_2-p_1$.
+- Let $t,s\in\mathbb R$ be the line parameters.
 
-### Step-by-Step Solution
+## Step 1 — Compare the Directions
 
-#### Step 1 — Compare the directions
-The direction vectors are $u=(1,2,1)$ and $v=(0,1,-1)$. They are not proportional: the first component of $u$ is nonzero while that of $v$ is zero. Thus the lines are not parallel.
+**Parallel-direction test.** Lines are parallel exactly when their direction vectors are scalar multiples. Compare $v_1=(1,2,1)$ and $v_2=(0,1,-1)$:
 
-#### Step 2 — Test whether they intersect
-Equating the coordinate representations gives
+The directions are
 
 $$
-1+t=2,\qquad 1+2t=s,\qquad t=1-s.
+v_1=(1,2,1),\qquad v_2=(0,1,-1).
 $$
 
-The first equation forces $t=1$. The third then forces $s=0$, but the second would require $s=3$. The system is inconsistent, so there is no intersection.
+They are not scalar multiples because $v_2$ has first component $0$ while $v_1$ has first component $1$. Therefore $L_1$ and $L_2$ are not parallel.
 
-#### Step 3 — Confirm the lines are skew
-The displacement from the base point of $L_1$ to that of $L_2$ is $w=(1,-1,1)$. Compute
+## Step 2 — Test for an Intersection
+
+**Intersection condition.** A common point exists when $p_1+t v_1=p_2+s v_2$ has a real solution. Write this vector equation in coordinates:
+
+Equating coordinates gives
 
 $$
-u\times v=(-3,1,1),\qquad
-w\cdot(u\times v)=-3-1+1=-3.
+\begin{aligned}
+1+t&=2, \\
+1+2t&=s, \\
+t&=1-s.
+\end{aligned}
 $$
 
-The nonzero scalar triple product shows the directions and displacement are not coplanar. Thus the lines are skew.
+The first equation gives
 
-### Verification
-The lines are nonparallel and the coordinate equations admit no common parameter pair. The nonzero coplanarity test independently rules out intersection.
+$$
+t=1.
+$$
 
-### Final Answer
-$L_1$ and $L_2$ are skew lines. They do not intersect, and they are not parallel.
+The third equation then gives
 
-### Key Takeaways
-- In three dimensions, nonparallel lines need not intersect.
-- Distinguish skew lines from intersecting ones by solving the coordinate equations or checking coplanarity.
+$$
+1=1-s,
+$$
+
+so
+
+$$
+s=0.
+$$
+
+The second equation requires
+
+$$
+s=1+2t=1+2(1)=3,
+$$
+
+which contradicts $s=0$. Thus no pair $(t,s)$ satisfies all three equations.
+
+## Step 3 — Confirm the Skew Classification
+
+**Skew test.** For nonparallel lines, let $w=p_2-p_1$. If $w\cdot(v_1\times v_2)$ is nonzero, no plane contains both lines, so they are skew. Here
+
+Compute
+
+$$
+w=p_2-p_1=(1,-1,1).
+$$
+
+Compute the cross product:
+
+$$
+\begin{aligned}
+v_1\times v_2
+&=
+\begin{pmatrix}
+(2)(-1)-(1)(1) \\
+(1)(0)-(1)(-1) \\
+(1)(1)-(2)(0) \\
+\end{pmatrix} \\
+&=(-3,1,1).
+\end{aligned}
+$$
+
+The scalar triple product is
+
+$$
+\begin{aligned}
+w\cdot(v_1\times v_2)
+&=(1,-1,1)\cdot(-3,1,1) \\
+&=-3-1+1 \\
+&=-3.
+\end{aligned}
+$$
+
+Since $-3\neq0$, the lines are not coplanar.
+
+## Verification
+
+The coordinate equations are inconsistent, and the independent scalar-triple-product test is nonzero. Both checks agree that the lines do not meet.
+
+## Geometric Interpretation
+
+The two lines have different directions and occupy noncoplanar positions. They are skew rather than intersecting or parallel.
+
+## Final Answer
+
+$L_1$ and $L_2$ are skew lines. They are not parallel and have no intersection point.

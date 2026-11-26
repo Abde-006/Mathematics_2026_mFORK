@@ -1,6 +1,6 @@
-# Solution 2 — Circle by Completing the Square
+# Solution 2 - Circle by Completing the Square
 
-## Problem Statement
+## Problem statement
 
 Reduce
 
@@ -8,61 +8,101 @@ $$
 x^2+y^2-6x+4y-3=0
 $$
 
-to canonical form, find the center and radius, and check two points in both forms.
+to canonical form. Find the center and radius, then substitute two points from the circle into both forms.
 
-## Objective
+## Lettered quantities
 
-Complete the square in each variable to reveal the circle's center and radius.
+- Let $(h,k)$ denote the circle center and let $r>0$ denote the radius.
 
-## Concepts and Formulas
+## Step 1 - Group
 
-For a quadratic expression $u^2+bu$, add and subtract $(b/2)^2$ to obtain $(u+b/2)^2-(b/2)^2$. A circle in canonical form is $(x-h)^2+(y-k)^2=r^2$.
+**Completing-the-square property.** $u^2+bu=(u+b/2)^2-(b/2)^2$ removes the linear term while preserving the quadratic value. Group using
 
-## Step-by-Step Solution
-
-Group the terms in each variable and move the constant:
+Regroup by variable:
 
 $$
 (x^2-6x)+(y^2+4y)=3.
 $$
 
-Complete each square:
+## Step 2 - Complete
+
+**Apply the square reminder.** For $u=x$ or $y$, add and subtract $(b/2)^2$ inside each grouped expression:
+ both squares
+
+For $x^2-6x$, $b=-6$, so $(b/2)^2=(-3)^2=9$. For $y^2+4y$, $b=4$, so $(b/2)^2=2^2=4$.
+
+Add $9$ and $4$ to both sides:
 
 $$
 (x^2-6x+9)+(y^2+4y+4)=3+9+4.
 $$
 
-Thus
+The first square factorization gives $(x-3)^2$, and the second gives $(y+2)^2$. Therefore
 
 $$
 (x-3)^2+(y+2)^2=16.
 $$
 
-The center is $(3,-2)$ and the radius is $4$.
+Thus $h=3$, $k=-2$, and $r^2=16$, so $r=4$.
 
-Choose the points $(7,-2)$ and $(3,2)$, each four units from the center. In canonical form, each gives $4^2+0^2=16$. In the original left-hand side:
+## Step 3 - Choose
+
+**Circle recognition.** Once the equation is $(x-h)^2+(y-k)^2=r^2$, $(h,k)$ is the center and $r$ is the radius. Rewrite and choose points:
+
+Choose $P=(7,-2)$ and $Q=(3,2)$, obtained by moving $r=4$ from the center horizontally and vertically.
+
+In the canonical form,
 
 $$
-7^2+(-2)^2-6(7)+4(-2)-3=49+4-42-8-3=0,
+(7-3)^2+(-2+2)^2=4^2+0=16,
 $$
 
+and
+
 $$
-3^2+2^2-6(3)+4(2)-3=9+4-18+8-3=0.
+(3-3)^2+(2+2)^2=0+4^2=16.
+$$
+
+In the original left-hand side,
+
+$$
+7^2+(-2)^2-6(7)+4(-2)-3
+=49+4-42-8-3=0,
+$$
+
+and
+
+$$
+3^2+2^2-6(3)+4(2)-3
+=9+4-18+8-3=0.
 $$
 
 ## Verification
 
-Expanding the canonical equation gives $x^2-6x+9+y^2+4y+4=16$, which simplifies to the original equation. Both selected points satisfy both forms.
-
-## Final Answer
+Expanding the canonical form gives
 
 $$
-(x-3)^2+(y+2)^2=16
+x^2-6x+9+y^2+4y+4=16,
 $$
 
-The circle has center $(3,-2)$ and radius $4$.
+which simplifies to
 
-## Key Takeaways
+$$
+x^2+y^2-6x+4y-3=0.
+$$
 
-- The completed-square constants must be added to both sides.
-- The signs inside the factors locate the center: $(x-3)^2$ gives $x=3$, and $(y+2)^2$ gives $y=-2$.
+Thus the two forms describe exactly the same circle.
+
+## Geometric interpretation
+
+The factor $(x-3)^2$ locates the center three units to the right of the origin, while $(y+2)^2$ locates it two units below the origin.
+
+## Final answer
+
+The canonical equation is
+
+$$
+(x-3)^2+(y+2)^2=16.
+$$
+
+The circle has center $(3,-2)$ and radius $4$. Both $(7,-2)$ and $(3,2)$ satisfy both forms.

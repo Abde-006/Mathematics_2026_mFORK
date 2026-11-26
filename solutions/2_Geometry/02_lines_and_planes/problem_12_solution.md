@@ -1,57 +1,146 @@
-## Exercise 12 — Intersection Line of Two Planes
+# Exercise 12 — Intersection Line of Two Planes
 
-### Problem Statement
-Find a parametric equation of the intersection of $x+y+z=3$ and $x-y+z=1$. Find its direction vector both from the system and from the cross product of the normals, and compare the results.
+## Problem Statement
 
-### Objective
-Construct the common line of two nonparallel planes using algebraic elimination and plane normals.
+Find a parametric equation of the intersection of
 
-### Concepts and Formulas
-- Points on the intersection satisfy both plane equations.
-- The direction of the intersection is perpendicular to both plane normals.
-- A cross product of the normals gives such a direction.
+$$
+x+y+z=3,\qquad x-y+z=1.
+$$
 
-### Step-by-Step Solution
+Find the direction vector in two ways: from the system and from the cross product of the normals. Compare the results.
 
-#### Step 1 — Solve the plane system
+## Lettered Quantities
+
+- Let $\Pi_1:x+y+z=3$ with normal $n_1=(1,1,1)$.
+- Let $\Pi_2:x-y+z=1$ with normal $n_2=(1,-1,1)$.
+- Let $X=(x,y,z)$ be a point on the intersection.
+- Let $p$ be a known point on the intersection and $v$ its direction.
+
+## Step 1 — Solve the System Algebraically
+
+**Algebraic plane intersection.** A point of the intersection must satisfy both plane equations. Solving the system gives the line in parametric form. Write
+
 Subtract the second equation from the first:
 
 $$
-2y=2,
+\begin{aligned}
+(x+y+z)-(x-y+z)&=3-1, \\
+2y&=2.
+\end{aligned}
 $$
 
-so $y=1$. Substitution into either plane equation gives $x+z=2$. Let $x=t$, which gives $z=2-t$.
+Hence
 
-#### Step 2 — Write the line
+$$
+y=1.
+$$
+
+Substitute $y=1$ into $x+y+z=3$:
+
+$$
+x+1+z=3,
+$$
+
+so
+
+$$
+x+z=2.
+$$
+
+Set $x=t$. Then
+
+$$
+z=2-t.
+$$
+
+Thus the intersection line is
+
+$$
+\begin{aligned}
+(x,y,z)
+&=(t,1,2-t) \\
+&=(0,1,2)+t(1,0,-1).
+\end{aligned}
+$$
+
+Its direction from the system is
+
+$$
+v_{\mathrm{system}}=(1,0,-1).
+$$
+
+## Step 2 — Compute the Direction by Cross Product
+
+**Cross-product direction.** The intersection line is perpendicular to both plane normals, so $v=n_1\times n_2$ is its direction. The normals are $n_1=(1,1,1)$ and $n_2=(1,-1,1)$:
+
+Compute
+
+$$
+\begin{aligned}
+n_1\times n_2
+&=
+\begin{pmatrix}
+(1)(1)-(1)(-1) \\
+(1)(1)-(1)(1) \\
+(1)(-1)-(1)(1) \\
+\end{pmatrix} \\
+&=(2,0,-2).
+\end{aligned}
+$$
+
+Thus
+
+$$
+v_{\mathrm{cross}}=(2,0,-2)=2(1,0,-1).
+$$
+
+## Verification
+
+At $p=(0,1,2)$,
+
+$$
+0+1+2=3,
+$$
+
+and
+
+$$
+0-1+2=1.
+$$
+
+Therefore $p$ lies on both planes.
+
+The system-derived direction satisfies
+
+$$
+\begin{aligned}
+n_1\cdot v_{\mathrm{system}}&=(1,1,1)\cdot(1,0,-1)=1-1=0, \\
+n_2\cdot v_{\mathrm{system}}&=(1,-1,1)\cdot(1,0,-1)=1-1=0.
+\end{aligned}
+$$
+
+Hence it is perpendicular to both normals.
+
+For every $t$,
+
+$$
+\begin{aligned}
+t+(1)+(2-t)&=3, \\
+t-1+(2-t)&=1.
+\end{aligned}
+$$
+
+## Geometric Interpretation
+
+Two nonparallel planes intersect along a line. That line is perpendicular to both plane normals, so its direction is parallel to their cross product.
+
+## Final Answer
+
 The intersection line is
 
 $$
 (x,y,z)=(0,1,2)+t(1,0,-1),\qquad t\in\mathbb R.
 $$
 
-Its direction from the parameterization is $(1,0,-1)$.
-
-#### Step 3 — Obtain the direction from the normals
-The plane normals are $n_1=(1,1,1)$ and $n_2=(1,-1,1)$. Expanding the cross product gives
-
-$$
-n_1\times n_2=
-\begin{pmatrix}
-1\cdot1-1\cdot(-1) \\
-1\cdot1-1\cdot1 \\
-1\cdot(-1)-1\cdot1 \\
-\end{pmatrix}
-=(2,0,-2).
-$$
-
-Thus the cross-product direction is $(2,0,-2)=2(1,0,-1)$, a nonzero scalar multiple of the system-derived direction.
-
-### Verification
-At the base point $(0,1,2)$, the first plane gives $0+1+2=3$ and the second gives $0-1+2=1$. The direction $(1,0,-1)$ is perpendicular to both normals: its dot products are $1-1=0$ and $1-1=0$. Therefore every point on the parameterized line satisfies both plane equations.
-
-### Final Answer
-The intersection line is $(x,y,z)=(0,1,2)+t(1,0,-1)$. Both methods produce direction $(1,0,-1)$ up to a nonzero scalar.
-
-### Key Takeaways
-- Eliminating variables gives a direct parameterization of the intersection.
-- The cross product of plane normals gives the same line direction geometrically.
+The cross product gives $(2,0,-2)$, which is the scalar multiple $2(1,0,-1)$ and therefore the same direction.

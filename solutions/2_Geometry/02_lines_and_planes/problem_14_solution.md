@@ -1,37 +1,93 @@
-## Exercise 14 — Contrast: Intersection and Parallelism
+# Exercise 14 — Contrast: Intersection and Parallelism
 
-### Problem Statement
-From $P=(0,0,1)$, consider lines with directions $v_1=(2,1,-1)$ and $v_2=(2,1,0)$. Analyze each relative to $z=0$. Find the intersection for the line that intersects the plane, and recognize parallelism for the other without solving an equation.
+## Problem Statement
 
-### Objective
-Compare line-plane behavior by testing each direction against the plane normal before calculating.
-
-### Concepts and Formulas
-- The plane $z=0$ has normal $n=(0,0,1)$.
-- If $n\cdot v\neq0$, the line intersects the plane at one point.
-- If $n\cdot v=0$, the line is parallel to the plane; a base point outside it means there is no intersection.
-
-### Step-by-Step Solution
-
-#### Step 1 — Analyze the line with direction $v_1$
-The dot product is $n\cdot v_1=-1$, which is nonzero, so this line intersects the plane once. Its parameterization is
+From $P=(0,0,1)$, draw lines with direction vectors
 
 $$
-(x,y,z)=(0,0,1)+t(2,1,-1)=(2t,t,1-t).
+v_1=(2,1,-1),\qquad v_2=(2,1,0).
 $$
 
-Set $z=0$: $1-t=0$, so $t=1$. The intersection point is $(2,1,0)$.
+For each line, analyze its position relative to the plane $z=0$. Find the intersection point for the line that intersects the plane. Explain parallelism of the other line without solving an equation.
 
-#### Step 2 — Analyze the line with direction $v_2$
-Now $n\cdot v_2=0$. Its $z$-coordinate remains equal to the base point's $z$-coordinate, $1$. Thus the line is parallel to $z=0$. The base point is not on the plane, so the line does not lie in it and has no intersection.
+## Lettered Quantities
 
-### Verification
-For the first line at $t=1$, the point is $(2,1,0)$, which satisfies the plane equation. For the second line, every point has $z=1$, confirming it is disjoint from $z=0$.
+- Let $P=(0,0,1)$ be the common base point.
+- Let $v_1=(2,1,-1)$ define $L_1$.
+- Let $v_2=(2,1,0)$ define $L_2$.
+- Let $n=(0,0,1)$ be the normal of $\Pi:z=0$.
 
-### Final Answer
-- Direction $v_1$: intersects $z=0$ at $(2,1,0)$.
-- Direction $v_2$: parallel to $z=0$ with no common points.
+## Step 1 — Analyze $L_1$
 
-### Key Takeaways
-- The direction-normal dot product identifies whether the line can cross the plane.
-- A parallel line is contained in the plane only if its base point lies in the plane.
+**Line-plane substitution test.** Substituting $X=P+t v$ into $n\cdot X=0$ gives $n\cdot P+t(n\cdot v)=0$. For $z=0$, $n=(0,0,1)$, so
+
+The first line is
+
+$$
+L_1:P+t v_1=(2t,t,1-t).
+$$
+
+Compute
+
+$$
+n\cdot v_1=(0,0,1)\cdot(2,1,-1)=-1\neq0.
+$$
+
+Therefore $L_1$ intersects $z=0$ once.
+
+Set $z=0$:
+
+$$
+1-t=0,
+$$
+
+so
+
+$$
+t=1.
+$$
+
+Substitute $t=1$:
+
+$$
+(x,y,z)=(2(1),1,1-1)=(2,1,0).
+$$
+
+## Step 2 — Analyze $L_2$
+
+**Use the dot-product criterion.** $n\cdot v=0$ means the direction is perpendicular to $n$, hence parallel to the plane. With $n\cdot P=1$, no point is on $z=0$, so apply
+
+The second line is
+
+$$
+L_2:P+t v_2=(2t,t,1).
+$$
+
+Compute
+
+$$
+n\cdot v_2=(0,0,1)\cdot(2,1,0)=0.
+$$
+
+Therefore $v_2$ is parallel to $z=0$. In fact, every point on $L_2$ has
+
+$$
+z=1.
+$$
+
+Since $P=(0,0,1)$ is not on $z=0$, $L_2$ is parallel and disjoint, not contained.
+
+## Verification
+
+At $t=1$, $L_1$ gives $(2,1,0)$, which satisfies $z=0$.
+
+At every $t$, $L_2$ gives $z=1$, so no point satisfies $z=0$.
+
+## Geometric Interpretation
+
+Although $v_1$ and $v_2$ differ only in their $z$ components, that component decides the result. A nonzero normal component allows $z$ to change and cross $z=0$, while a zero normal component keeps $z$ constant.
+
+## Final Answer
+
+- $L_1$ intersects $z=0$ at $(2,1,0)$.
+- $L_2$ is parallel to $z=0$ and has no common points.

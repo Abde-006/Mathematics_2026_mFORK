@@ -1,55 +1,87 @@
 ## Exercise 12 — A Normal Vector to a Plane
 
-### Problem Statement
-Given $A=(1,0,2)$, $B=(2,1,0)$, and $C=(0,3,1)$, construct two vectors in the plane, find a vector perpendicular to both, and check perpendicularity using dot products.
+### Problem statement
 
-### Objective
-Find a normal vector to the plane through three given points.
+Given $A=(1,0,2)$, $B=(2,1,0)$, and $C=(0,3,1)$, construct two vectors in the plane, find a vector perpendicular to both, and check the perpendicularity using dot products.
 
-### Concepts and Formulas
-- Differences between points in a plane give direction vectors in that plane.
-- The cross product of two nonparallel direction vectors is perpendicular to both.
-- A dot product of zero verifies perpendicularity.
+### Formula used
 
-### Step-by-Step Solution
-
-#### Step 1 — Construct two in-plane vectors
+Vectors lying in a plane through $A$, $B$, and $C$ are obtained by point differences:
 
 $$
-\overrightarrow{AB}=B-A=(1,1,-2),\qquad
-\overrightarrow{AC}=C-A=(-1,3,-1)
+\overrightarrow{AB}=B-A,\qquad \overrightarrow{AC}=C-A
 $$
 
-#### Step 2 — Take their cross product
+A cross product of two nonparallel in-plane vectors produces a normal vector:
 
 $$
-\overrightarrow{AB}\times\overrightarrow{AC}
-=(1(-1)-(-2)(3),\;(-2)(-1)-1(-1),\;1(3)-1(-1))
-=(5,3,4)
+n=p\times q
 $$
 
-Set $n=(5,3,4)$.
-
-#### Step 3 — Verify both perpendicularities
+Perpendicularity is verified by
 
 $$
-n\cdot\overrightarrow{AB}=5(1)+3(1)+4(-2)=5+3-8=0
+n\cdot p=0,\qquad n\cdot q=0
+$$
+
+### Solution
+
+Construct two directions from $A$:
+
+$$
+\overrightarrow{AB}=B-A=(2-1,1-0,0-2)=(1,1,-2)
 $$
 
 $$
-n\cdot\overrightarrow{AC}=5(-1)+3(3)+4(-1)=-5+9-4=0
+\overrightarrow{AC}=C-A=(0-1,3-0,1-2)=(-1,3,-1)
+$$
+
+Compute their cross product:
+
+$$
+\begin{aligned}
+n
+&=(1,1,-2)\times(-1,3,-1) \\
+&=(1(-1)-(-2)(3),\,(-2)(-1)-1(-1),\,1(3)-1(-1)) \\
+&=(-1+6,\,2+1,\,3+1) \\
+&=(5,3,4)
+\end{aligned}
 $$
 
 ### Verification
-Both dot products vanish, so $n$ is perpendicular to the two in-plane directions and hence is a normal vector to the plane.
 
-### Final Answer
-Two vectors in the plane are $\overrightarrow{AB}=(1,1,-2)$ and $\overrightarrow{AC}=(-1,3,-1)$. One normal vector is
+Check $n$ against $\overrightarrow{AB}$:
+
+$$
+n\cdot\overrightarrow{AB}
+=(5,3,4)\cdot(1,1,-2)
+=5+3-8
+=0
+$$
+
+Check $n$ against $\overrightarrow{AC}$:
+
+$$
+n\cdot\overrightarrow{AC}
+=(5,3,4)\cdot(-1,3,-1)
+=-5+9-4
+=0
+$$
+
+Both dot products are zero, so $n$ is perpendicular to two independent directions in the plane.
+
+### Final answer
+
+$$
+\overrightarrow{AB}=(1,1,-2)
+$$
+
+$$
+\overrightarrow{AC}=(-1,3,-1)
+$$
+
+One normal vector is
 
 $$
 n=(5,3,4)
 $$
-
-### Key Takeaways
-- Point differences construct directions in a plane.
-- The cross product of two in-plane directions produces a normal.

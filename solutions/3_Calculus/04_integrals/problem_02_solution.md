@@ -1,23 +1,44 @@
-## Question
+# Problem 2. Powers, Roots, and the Domain
 
-Compute $\int(2\sqrt{x}+3/x^2-x^{1/3})\,dx$, first rewriting powers and determining the original domain, then verify by differentiation.
+## Problem
+
+Compute $\int(2\sqrt{x}+3/x^2-x^{1/3})dx$, determine the domain, and verify.
 
 ## Solution
 
-The integrand can be written as
+Rewrite the integrand as powers:
 
-$$2x^{1/2}+3x^{-2}-x^{1/3}.$$
+$$
+2x^{1/2}+3x^{-2}-x^{1/3}.
+$$
 
-The square root requires $x\geq0$, while the term $3/x^2$ requires $x\ne0$. Their intersection is therefore $x>0$, which is the domain of the original expression.
+The square root requires $x\ge0$, and $x^{-2}$ requires $x
+e0$, so the original domain is $(0,\infty)$.
 
-Applying the power rule term by term,
+### Computation
 
-$$\int\left(2x^{1/2}+3x^{-2}-x^{1/3}\right)dx
-=\frac43x^{3/2}-\frac3x-\frac34x^{4/3}+C.$$
+The power-rule reminder is $\int x^n\,dx=\frac{x^{n+1}}{n+1}+C$ for $n\neq-1$. It raises each identified exponent by one and divides by the new exponent.
 
-On differentiating,
+$$
+\begin{aligned}
+\int2x^{1/2}dx&=\frac43x^{3/2},\\
+\int3x^{-2}dx&=-3x^{-1},\\
+\int-x^{1/3}dx&=-\frac34x^{4/3}.
+\end{aligned}
+$$
 
-$$\left(\frac43x^{3/2}-\frac3x-\frac34x^{4/3}+C\right)'
-=2x^{1/2}+3x^{-2}-x^{1/3},$$
+Hence
 
-which recovers the integrand for $x>0$.
+$$
+F(x)=\frac43x^{3/2}-\frac3x-\frac34x^{4/3}+C.
+$$
+
+### Verification
+
+Differentiation gives $2x^{1/2}+3x^{-2}-x^{1/3}$, exactly the integrand.
+
+## Final Answer
+
+$$
+\frac43x^{3/2}-\frac3x-\frac34x^{4/3}+C,\qquad x>0.
+$$

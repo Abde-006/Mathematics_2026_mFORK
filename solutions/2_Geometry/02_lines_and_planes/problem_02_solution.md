@@ -1,53 +1,111 @@
-## Exercise 2 — A Line in Space
+# Exercise 2 — A Line in Space
 
-### Problem Statement
+## Problem Statement
+
 Given
 
 $$
 L:(x,y,z)=(2,-1,3)+t(1,2,-2),
 $$
 
-state a point on the line and its direction vector, check whether $P=(4,3,-1)$ lies on $L$, and find the point corresponding to $t=-1$.
+state a point on the line and its direction vector, determine whether $P=(4,3,-1)$ lies on $L$, and find the point corresponding to $t=-1$.
 
-### Objective
-Interpret a spatial parametric equation as a fixed point plus a scalar multiple of a direction vector.
+## Lettered Quantities
 
-### Concepts and Formulas
-- In space, a line can be written as $r=p+tv$.
-- The vector $p$ gives a point on the line, and $v$ gives its direction.
-- A proposed point lies on the line if one common value of $t$ satisfies all three coordinate equations.
+- Let $p=(p_1,p_2,p_3)=(2,-1,3)$ be the base point.
+- Let $v=(v_1,v_2,v_3)=(1,2,-2)$ be the direction vector.
+- Let $P=(x_P,y_P,z_P)=(4,3,-1)$ be the point to test.
+- Let $t$ be the real parameter.
 
-### Step-by-Step Solution
+## Step 1 — Read the Base Point and Direction
 
-#### Step 1 — Read the defining point and direction
-The fixed vector is $p=(2,-1,3)$, so it is a point on $L$. The direction vector is $v=(1,2,-2)$. In coordinates,
+**Parametric point form.** A point $X=p+t v$ lies on $L$ when $X$ is the given base point plus a scalar multiple of the direction. Here $p=(2,-1,3)$ and $v=(1,2,-2)$, so
 
-$$
-x=2+t,\qquad y=-1+2t,\qquad z=3-2t.
-$$
-
-#### Step 2 — Test the point $P$
-The $x$-coordinate requires $2+t=4$, so $t=2$. With this same parameter,
+The given equation is already of the form $p+t v$. Therefore
 
 $$
-y=-1+2(2)=3,\qquad z=3-2(2)=-1.
+p=(2,-1,3)
 $$
 
-These are the coordinates of $P$, so the point lies on $L$.
-
-#### Step 3 — Evaluate the line at $t=-1$
-Substitution gives
+is a point on $L$, and
 
 $$
-(x,y,z)=(2,-1,3)-(1,2,-2)=(1,-3,5).
+v=(1,2,-2)
 $$
 
-### Verification
-At $t=2$, the line gives $(2+2,-1+4,3-4)=(4,3,-1)$. At $t=-1$, it gives $(1,-3,5)$ as computed.
+is a direction vector. The coordinate equations are
 
-### Final Answer
-A point on $L$ is $(2,-1,3)$, and a direction vector is $(1,2,-2)$. The point $P=(4,3,-1)$ lies on $L$ at $t=2$. The point at $t=-1$ is $(1,-3,5)$.
+$$
+\begin{aligned}
+x&=2+t, \\
+y&=-1+2t, \\
+z&=3-2t.
+\end{aligned}
+$$
 
-### Key Takeaways
-- A parametric line specifies both a location and a direction.
-- For a membership check, the same parameter must work in every coordinate.
+## Step 2 — Test Whether $P$ Lies on $L$
+
+**Parameter test.** Use the reminder $X=p+t v$: $P$ lies on $L$ exactly when the same real $t$ produces all three coordinates. Compare
+
+Set the $x$-coordinate equal to $4$:
+
+$$
+2+t=4,
+$$
+
+so
+
+$$
+t=4-2=2.
+$$
+
+Substitute $t=2$ into the remaining coordinates:
+
+$$
+\begin{aligned}
+y&=-1+2(2)=3, \\
+z&=3-2(2)=-1.
+\end{aligned}
+$$
+
+Thus $P$ is obtained with the same parameter in all three coordinates.
+
+## Step 3 — Find the Point for $t=-1$
+
+**Evaluate a parameter.** In the parametric formula $X=p+t v$, substituting $t=-1$ gives
+
+Substitute $t=-1$:
+
+$$
+\begin{aligned}
+(x,y,z)
+&=(2,-1,3)+(-1)(1,2,-2) \\
+&=(2,-1,3)-(1,2,-2) \\
+&=(2-1,-1-2,3-(-2)) \\
+&=(1,-3,5).
+\end{aligned}
+$$
+
+## Verification
+
+At $t=2$,
+
+$$
+(2, -1, 3)+2(1,2,-2)
+=(2+2,-1+4,3-4)
+=(4,3,-1).
+$$
+
+At $t=-1$, the calculation gives $(1,-3,5)$ directly. No coordinate conflict occurs.
+
+## Geometric Interpretation
+
+The line passes through $p=(2,-1,3)$ and extends in the direction $v=(1,2,-2)$. The parameter $t=2$ reaches $P$, while $t=-1$ reaches the point in the opposite direction.
+
+## Final Answer
+
+A point on $L$ is $(2,-1,3)$, and a direction vector is $(1,2,-2)$.
+
+The point $P=(4,3,-1)$ lies on $L$ at $t=2$.
+
+The point corresponding to $t=-1$ is $(1,-3,5)$.

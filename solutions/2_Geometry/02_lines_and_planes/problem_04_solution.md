@@ -1,61 +1,114 @@
-## Exercise 4 — Plane Through Three Points
+# Exercise 4 — Plane Through Three Points
 
-### Problem Statement
-Find the plane through $A=(1,0,0)$, $B=(0,1,0)$, and $C=(0,0,1)$. Construct two vectors in the plane, use their cross product, and check the equation on all three points.
+## Problem Statement
 
-### Objective
-Construct a plane normal from two independent directions within the plane.
-
-### Concepts and Formulas
-- Differences of points on a plane give direction vectors in the plane.
-- The cross product of two nonparallel plane directions is perpendicular to both and hence is a normal vector.
-- For a plane through $A$ with normal $n$, use $n\cdot(X-A)=0$.
-
-### Step-by-Step Solution
-
-#### Step 1 — Construct two plane directions
-Using $A$ as the base point,
+Find the plane through
 
 $$
-\overrightarrow{AB}=B-A=(-1,1,0),\qquad
-\overrightarrow{AC}=C-A=(-1,0,1).
+A=(1,0,0),\qquad B=(0,1,0),\qquad C=(0,0,1).
 $$
 
-These are not scalar multiples, so they determine the plane's two independent directions.
+Construct two vectors in the plane, use their cross product, and check the equation at all three points.
 
-#### Step 2 — Compute a normal vector
-Their cross product is
+## Lettered Quantities
+
+- Let $A=(1,0,0)$, $B=(0,1,0)$, and $C=(0,0,1)$.
+- Let $\vec u=\overrightarrow{AB}$ and $\vec w=\overrightarrow{AC}$.
+- Let $n=\vec u\times\vec w$ be a normal vector.
+- Let $X=(x,y,z)$ be a general point.
+
+## Step 1 — Construct Two Plane Directions
+
+**In-plane displacement vectors.** The differences $B-A$ and $C-A$ point from $A$ to two other points in the plane, so they are two directions of the plane. Use $A=(1,0,0)$, $B=(0,1,0)$, and $C=(0,0,1)$:
+
+Using $A=(1,0,0)$,
 
 $$
-\overrightarrow{AB}\times\overrightarrow{AC}=
+\begin{aligned}
+\vec u&=B-A=(-1,1,0), \\
+\vec w&=C-A=(-1,0,1).
+\end{aligned}
+$$
+
+They are not scalar multiples, so they determine two independent directions.
+
+## Step 2 — Compute a Normal Vector
+
+**Cross product as normal.** A cross product $u\times w$ is perpendicular to both $u$ and $w$, so it supplies a normal to their plane. With $u=(-1,1,0)$ and $w=(-1,0,1)$, compute
+
+Substitute $\vec u=(-1,1,0)$ and $\vec w=(-1,0,1)$:
+
+$$
+\begin{aligned}
+n
+&=\vec u\times\vec w \\
+&=
 \begin{pmatrix}
-1 \\
-1 \\
-1 \\
-\end{pmatrix}.
+(1)(1)-(0)(0) \\
+(0)(-1)-(-1)(1) \\
+(-1)(0)-(1)(-1) \\
+\end{pmatrix} \\
+&=(1,1,1).
+\end{aligned}
 $$
 
-For example, its first component is $1\cdot1-0\cdot0=1$, its second is $0\cdot(-1)-(-1)\cdot1=1$, and its third is $(-1)\cdot0-1\cdot(-1)=1$. Thus take $n=(1,1,1)$.
+## Step 3 — Form the Plane Equation
 
-#### Step 3 — Form the plane equation
-The point-normal equation through $A$ is
+**Point-normal plane equation.** A normal $n$ gives $n\cdot(X-A)=0$, because $X-A$ lies in the plane exactly when it is perpendicular to $n$. Substitute $n$ and $A$:
+
+Using $n=(1,1,1)$ and $A=(1,0,0)$,
 
 $$
-(1,1,1)\cdot(x-1,y,z)=0,
+(1,1,1)\cdot(x-1,y,z)=0.
 $$
 
-which simplifies to
+Hence
+
+$$
+x-1+y+z=0,
+$$
+
+and therefore
 
 $$
 x+y+z=1.
 $$
 
-### Verification
-At $A$, $1+0+0=1$; at $B$, $0+1+0=1$; and at $C$, $0+0+1=1$. Hence all three points satisfy the equation.
+## Verification
 
-### Final Answer
-The plane is $x+y+z=1$, with normal vector $(1,1,1)$.
+For $A=(1,0,0)$:
 
-### Key Takeaways
-- The cross product provides a normal from two nonparallel vectors in a plane.
-- A point-normal equation then determines the plane.
+$$
+1+0+0=1.
+$$
+
+For $B=(0,1,0)$:
+
+$$
+0+1+0=1.
+$$
+
+For $C=(0,0,1)$:
+
+$$
+0+0+1=1.
+$$
+
+The normal is also perpendicular to both plane directions:
+
+$$
+\begin{aligned}
+n\cdot\vec u&=(1,1,1)\cdot(-1,1,0)=-1+1+0=0, \\
+n\cdot\vec w&=(1,1,1)\cdot(-1,0,1)=-1+0+1=0.
+\end{aligned}
+$$
+
+## Geometric Interpretation
+
+The plane intercepts each coordinate axis at unit distance. Its normal $(1,1,1)$ is perpendicular to both $\overrightarrow{AB}$ and $\overrightarrow{AC}$.
+
+## Final Answer
+
+$$
+x+y+z=1.
+$$

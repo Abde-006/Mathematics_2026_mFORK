@@ -1,57 +1,88 @@
 ## Exercise 1 — Vector Operations and Their Meaning
 
-### Problem Statement
+### Problem statement
+
 For $u=(2,-1,3)$ and $v=(-1,4,2)$, compute $u+v$, $u-v$, and $3u-2v$. Verify that $(u+v)-v=u$, and explain geometrically what adding two vectors means.
 
-### Objective
-Perform coordinate-wise vector operations, verify a basic identity, and interpret vector addition geometrically.
+### Formula used
 
-### Concepts and Formulas
-- Vector addition and subtraction are performed coordinate by coordinate.
-- Scalar multiplication multiplies every coordinate by the scalar.
-- Geometrically, a sum is the displacement obtained by placing the tail of the second vector at the head of the first.
+Vector addition and subtraction are coordinate-wise:
 
-### Step-by-Step Solution
+$$
+(a_1,a_2,a_3)+(b_1,b_2,b_3)=(a_1+b_1,a_2+b_2,a_3+b_3)
+$$
 
-#### Step 1 — Add and subtract the vectors
+$$
+(a_1,a_2,a_3)-(b_1,b_2,b_3)=(a_1-b_1,a_2-b_2,a_3-b_3)
+$$
+
+Scalar multiplication multiplies every coordinate by the scalar:
+
+$$
+k(a_1,a_2,a_3)=(ka_1,ka_2,ka_3)
+$$
+
+This formula is used because linear combinations combine scaling and coordinate-wise addition.
+
+### Solution
+
+First add the vectors:
 
 $$
 u+v=(2+(-1),-1+4,3+2)=(1,3,5)
 $$
 
+The first coordinates, second coordinates, and third coordinates are added independently.
+
+Next subtract $v$ from $u$:
+
 $$
 u-v=(2-(-1),-1-4,3-2)=(3,-5,1)
 $$
 
-#### Step 2 — Compute the linear combination
+For $3u-2v$, first scale each vector:
 
 $$
-3u=(6,-3,9),\qquad 2v=(-2,8,4)
+3u=(6,-3,9)
 $$
 
-Therefore,
-
 $$
-3u-2v=(6,-3,9)-(-2,8,4)=(8,-11,5)
+2v=(-2,8,4)
 $$
 
-#### Step 3 — Verify the identity
+Then subtract corresponding coordinates:
 
 $$
-(u+v)-v=(1,3,5)-(-1,4,2)=(2,-1,3)=u
+3u-2v=(6-(-2),-3-8,9-4)=(8,-11,5)
 $$
 
 ### Verification
-Each operation was done coordinate by coordinate. The subtraction check returns the original vector $u$, as required.
 
-### Final Answer
+Reversing the addition with $v$ should recover $u$:
 
 $$
-u+v=(1,3,5),\qquad u-v=(3,-5,1),\qquad 3u-2v=(8,-11,5)
+(u+v)-v=(1,3,5)-(-1,4,2)
+=(1-(-1),3-4,5-2)
+=(2,-1,3)
+=u
 $$
 
-Adding vectors means combining displacements head-to-tail; the sum runs from the first tail to the final head. It is also the parallelogram diagonal when both vectors start at the same point.
+The check returns the original vector, so the calculation is consistent.
 
-### Key Takeaways
-- Vector operations act on corresponding coordinates.
-- Geometric addition combines displacements rather than simply combining endpoints.
+### Geometric interpretation
+
+Place the tail of $v$ at the head of $u$. The sum $u+v$ is the displacement from the original tail to the final head. If both vectors start at the same point, their sum is the diagonal of the parallelogram they span.
+
+### Final answer
+
+$$
+u+v=(1,3,5)
+$$
+
+$$
+u-v=(3,-5,1)
+$$
+
+$$
+3u-2v=(8,-11,5)
+$$

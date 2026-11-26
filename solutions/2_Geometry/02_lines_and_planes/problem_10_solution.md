@@ -1,51 +1,128 @@
-## Exercise 10 — Projection of a Point onto a Plane
+# Exercise 10 — Projection of a Point onto a Plane
 
-### Problem Statement
-Find the orthogonal projection of $P=(2,1,3)$ onto $x+y+z=3$, then find the reflection of $P$ across the plane. Check that the midpoint of the point and its reflection lies on the plane.
+## Problem Statement
 
-### Objective
-Use the plane normal to construct the perpendicular projection and the corresponding reflection.
-
-### Concepts and Formulas
-- For plane $n\cdot x=d$, the projection of $P$ is $H=P-\frac{n\cdot P-d}{\lVert n\rVert^2}n$.
-- The reflection across the plane is $R=P-2\frac{n\cdot P-d}{\lVert n\rVert^2}n=2H-P$.
-- The projection-to-point segment is parallel to the normal.
-
-### Step-by-Step Solution
-
-#### Step 1 — Find the normal offset
-Here $n=(1,1,1)$, $d=3$, and $\lVert n\rVert^2=3$. The signed plane residual at $P$ is
+Find the orthogonal projection of $P=(2,1,3)$ onto
 
 $$
-n\cdot P-d=2+1+3-3=3.
+x+y+z=3,
 $$
 
-#### Step 2 — Compute the projection
-The normal correction is $(3/3)n=n$. Thus
+and then find the reflection of $P$ across the plane. Check that the midpoint of $P$ and its reflection lies on the plane.
+
+## Lettered Quantities
+
+- Let $P=(p_1,p_2,p_3)=(2,1,3)$.
+- Let $n=(1,1,1)$ be the plane normal.
+- Let $d=3$ be the plane constant.
+- Let $H$ be the orthogonal projection.
+- Let $R$ be the reflection of $P$ across the plane.
+
+## Step 1 — Compute the Normal Residual
+
+**Normal residual for a plane.** The signed normal displacement from $P$ to $n\cdot X=d$ is $(n\cdot P-d)/\lVert n\rVert^2$ times $n$; this identifies how far and in which normal direction $P$ lies from the plane. Here
+
+Calculate
 
 $$
-H=P-n=(2,1,3)-(1,1,1)=(1,0,2).
+\begin{aligned}
+n\cdot P-d
+&=(1,1,1)\cdot(2,1,3)-3 \\
+&=2+1+3-3 \\
+&=3.
+\end{aligned}
 $$
 
-#### Step 3 — Compute the reflection
-Reflecting doubles the correction:
+Also,
 
 $$
-R=P-2n=(2,1,3)-(2,2,2)=(0,-1,1).
+\lVert n\rVert^2=1^2+1^2+1^2=3.
 $$
 
-### Verification
-The projected point lies on the plane because $1+0+2=3$. The midpoint of $P$ and $R$ is
+Thus
 
 $$
-\frac{P+R}{2}=\left(\frac{2+0}{2},\frac{1-1}{2},\frac{3+1}{2}\right)=(1,0,2),
+\frac{n\cdot P-d}{\lVert n\rVert^2}=\frac33=1.
 $$
 
-which is the projection and lies on the plane. Also, $P-H=(1,1,1)$ is parallel to the plane normal.
+## Step 2 — Compute the Projection
 
-### Final Answer
-The orthogonal projection is $H=(1,0,2)$, and the reflection is $R=(0,-1,1)$.
+**Orthogonal projection formula.** The projection is $H=P-(n\cdot P-d)n/\lVert n\rVert^2$, which removes the normal residual from $P$. Substitute $P=(2,1,3)$:
 
-### Key Takeaways
-- Projection moves a point along the normal until it reaches the plane.
-- Reflection continues the same normal displacement by an equal amount on the other side.
+Substitute into the projection formula:
+
+$$
+\begin{aligned}
+H
+&=P-1n \\
+&=(2,1,3)-(1,1,1) \\
+&=(1,0,2).
+\end{aligned}
+$$
+
+## Step 3 — Compute the Reflection
+
+**Reflection formula.** The reflected point is $R=P-2(n\cdot P-d)n/\lVert n\rVert^2$, the projection formula twice because $P$ traverses from itself to $H$ and then equally to the opposite side. Compute
+
+Substitute into the reflection formula:
+
+$$
+\begin{aligned}
+R
+&=P-2n \\
+&=(2,1,3)-2(1,1,1) \\
+&=(2,1,3)-(2,2,2) \\
+&=(0,-1,1).
+\end{aligned}
+$$
+
+## Verification
+
+The projection lies in the plane:
+
+$$
+1+0+2=3.
+$$
+
+The midpoint is
+
+$$
+\begin{aligned}
+\frac{P+R}{2}
+&=
+\begin{pmatrix}
+\frac{2+0}{2} \\
+\frac{1-1}{2} \\
+\frac{3+1}{2} \\
+\end{pmatrix} \\
+&=(1,0,2).
+\end{aligned}
+$$
+
+This equals $H$, so the midpoint lies on the plane.
+
+The segment displacement is
+
+$$
+H-P=(-1,-1,-1)=-(1,1,1),
+$$
+
+which is parallel to $n$.
+
+## Geometric Interpretation
+
+The shortest normal displacement carries $P$ to $H$ on the plane. Reflection carries $P$ the same perpendicular distance again across the plane.
+
+## Final Answer
+
+The orthogonal projection is
+
+$$
+H=(1,0,2).
+$$
+
+The reflection is
+
+$$
+R=(0,-1,1).
+$$

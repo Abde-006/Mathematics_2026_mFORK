@@ -1,54 +1,74 @@
-## Exercise 3 — Plane Through a Point with a Given Normal Vector
+# Exercise 3 — Plane Through a Point with a Given Normal Vector
 
-### Problem Statement
-Find the equation of the plane through $P=(1,-2,3)$ and perpendicular to $n=(2,1,-1)$. Check the result by substituting $P$ and explain the role of the normal vector.
+## Problem Statement
 
-### Objective
-Build a plane equation from one point and a normal vector.
+Find the equation of the plane through $P=(1,-2,3)$ and perpendicular to $n=(2,1,-1)$. Check the result by substituting $P$, and explain the role of the normal vector.
 
-### Concepts and Formulas
-- A plane through $P$ with normal vector $n$ consists of points $X$ for which $n\cdot(X-P)=0$.
-- The normal vector is perpendicular to every direction lying in the plane.
+## Lettered Quantities
 
-### Step-by-Step Solution
+- Let $P=(p_1,p_2,p_3)=(1,-2,3)$.
+- Let $n=(n_1,n_2,n_3)=(2,1,-1)$.
+- Let $X=(x,y,z)$ be a general point on the plane.
+- Let $d=n\cdot P$ be the plane constant.
 
-#### Step 1 — Apply the point-normal equation
-Write $X=(x,y,z)$. Then
+## Step 1 — Compute the Plane Constant
 
-$$
-(2,1,-1)\cdot(x-1,y+2,z-3)=0.
-$$
+**Point-normal plane property.** The plane through $P$ with normal $n$ consists of points $X$ for which $X-P$ is perpendicular to $n$, so $n\cdot(X-P)=0$. Using $P=(1,-2,3)$ and $n=(2,1,-1)$ gives
 
-Expanding the dot product gives
+Substitute $n=(2,1,-1)$ and $P=(1,-2,3)$:
 
 $$
-2(x-1)+(y+2)-(z-3)=0.
+\begin{aligned}
+d
+&=n\cdot P \\
+&=(2)(1)+(1)(-2)+(-1)(3) \\
+&=2-2-3 \\
+&=-3.
+\end{aligned}
 $$
 
-#### Step 2 — Simplify
-Collecting terms,
+## Step 2 — Write and Expand the Plane Equation
+
+**Expand the point-normal equation.** The scalar product is computed componentwise; this form identifies the plane constant while preserving $P$. Expand
+
+Using $n\cdot X=d$,
+
+$$
+(2,1,-1)\cdot(x,y,z)=-3.
+$$
+
+Therefore
+
+$$
+2x+y-z=-3,
+$$
+
+or
 
 $$
 2x+y-z+3=0.
 $$
 
-The coefficients $(2,1,-1)$ are precisely the components of the normal vector.
+## Verification
 
-### Verification
 Substitute $P=(1,-2,3)$:
 
 $$
-2(1)+(-2)-3+3=0.
+\begin{aligned}
+2(1)+(-2)-3+3
+&=2-2-3+3 \\
+&=0.
+\end{aligned}
 $$
 
-Thus $P$ lies on the plane. Any displacement within the plane has dot product zero with $n$, which is why $n$ is normal to it.
+Thus $P$ lies on the plane.
 
-### Final Answer
+## Geometric Interpretation
+
+The normal vector $n=(2,1,-1)$ is perpendicular to every direction in the plane. It fixes the plane's orientation, while $P$ fixes its location.
+
+## Final Answer
 
 $$
 2x+y-z+3=0.
 $$
-
-### Key Takeaways
-- A plane is determined by a point and a nonzero normal vector.
-- The normal vector is the coefficient vector of the plane's Cartesian equation.

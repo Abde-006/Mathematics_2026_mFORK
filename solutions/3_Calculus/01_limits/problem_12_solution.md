@@ -1,47 +1,58 @@
-# Exercise 12 — Exponential Function Limit
+# Problem 12. Exponential Function Limit
 
-## Problem Statement
+## Problem statement
 
-Compute the limit, connect it with the classical limit in Exercise 5, and show the transformation that reduces this expression to that pattern:
+Compute
 
 $$
 \lim_{x\to0}(1+3x)^{1/x}.
 $$
 
-## Step-by-Step Solution
+## Named quantities
 
-### Step 1 — Match the classical limit
+- $u=3x$ is the increment in the base.
+- $L$ is the requested limit.
 
-For $x$ sufficiently close to $0$, the base $1+3x$ is positive. Rewrite the exponent to expose the classical form:
+## Step 1 - Substitute $u=3x$
 
-$$
-(1+3x)^{1/x}
-=\left((1+3x)^{1/(3x)}\right)^3.
-$$
-
-### Step 2 — Change variables
-
-Let $u=3x$. Then $u\to0$ as $x\to0$, and the expression inside parentheses becomes $(1+u)^{1/u}$. The classical limit leading to $e$ gives
+**Classical exponential limit.**
 
 $$
 \lim_{u\to0}(1+u)^{1/u}=e.
 $$
 
-Taking the cube of this limit,
+As $x\to0$, $u=3x\to0$. Also,
 
 $$
-\lim_{x\to0}(1+3x)^{1/x}=e^3.
+\frac1x=\frac3u.
 $$
 
-The factor $3$ in the exponent scaling becomes the third power of the classical limit.
-
-## Final Answer
+Thus
 
 $$
-\lim_{x\to0}(1+3x)^{1/x}=e^3.
+(1+3x)^{1/x}
+=(1+u)^{3/u}
+=\left((1+u)^{1/u}\right)^3.
 $$
 
-## Key Takeaways
+## Step 2 - Apply the limit
 
-- Rewrite the exponent so the base and exponent match $(1+u)^{1/u}$.
-- A fixed power outside a limit becomes the same power of the limiting value.
+By continuity of exponentiation,
+
+$$
+L=\left(\lim_{u\to0}(1+u)^{1/u}\right)^3=e^3.
+$$
+
+## Verification
+
+At $x=0.001$, $(1.003)^{1000}\approx20.073$, close to $e^3\approx20.0855$. At $x=-0.001$, $(0.997)^{-1000}\approx20.079$. Both sides approach $e^3$.
+
+## Interpretation
+
+The factor $3$ in $3x$ becomes a triple exponent in the limit, giving $e^3$.
+
+## Final answer
+
+$$
+e^3
+$$

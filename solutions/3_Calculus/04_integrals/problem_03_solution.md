@@ -1,14 +1,43 @@
-## Question
+# Problem 3. Recognizing Basic Antiderivatives
 
-Compute $\int(2e^x+3\cos x-4\sin x)\,dx$, match each term to a known derivative, and verify the result.
+## Problem
+
+Compute $\int(2e^x+3\cos x-4\sin x)dx$ and verify.
 
 ## Solution
 
-We use $(e^x)'=e^x$, $(\sin x)'=\cos x$, and $(\cos x)'=-\sin x$. Therefore termwise integration gives
+Use the basic derivative facts
 
-$$\int(2e^x+3\cos x-4\sin x)\,dx
-=2e^x+3\sin x+4\cos x+C.$$
+$$
+(e^x)'=e^x,\qquad (\sin x)'=\cos x,\qquad (\cos x)'=-\sin x.
+$$
 
-The sign in the last term is positive because differentiating $4\cos x$ produces $-4\sin x$. Differentiating the whole result checks it at once:
+Therefore
 
-$$(2e^x+3\sin x+4\cos x+C)'=2e^x+3\cos x-4\sin x.$$
+$$
+\begin{aligned}
+\int2e^x dx&=2e^x,\\
+\int3\cos x dx&=3\sin x,\\
+\int-4\sin x dx&=4\cos x.
+\end{aligned}
+$$
+
+Combining gives
+
+$$
+F(x)=2e^x+3\sin x+4\cos x+C.
+$$
+
+### Verification
+
+$$
+F'(x)=2e^x+3\cos x-4\sin x,
+$$
+
+which equals the integrand.
+
+## Final Answer
+
+$$
+2e^x+3\sin x+4\cos x+C.
+$$

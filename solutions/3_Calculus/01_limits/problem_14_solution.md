@@ -1,62 +1,75 @@
-# Exercise 14 — A $0/0$ Limit with Trigonometry
+# Problem 14. A $0/0$ Limit with Trigonometry
 
-## Problem Statement
+## Problem statement
 
-Compute the limit without using l'Hôpital's rule. Justify the result with a trigonometric identity and the fundamental limit
-
-$$
-\lim_{u\to0}\frac{\sin u}{u}=1
-$$
-
-by reducing the expression to that known limit:
+Compute
 
 $$
-\lim_{x\to0}\frac{1-\cos x}{x^2}.
+\lim_{x\to0}\frac{1-\cos x}{x^2}
 $$
 
-## Step-by-Step Solution
+without l'Hôpital's rule.
 
-### Step 1 — Apply a trigonometric identity
+## Named quantities
 
-Use the half-angle identity
+- $x$ is an angle in radians.
+- $u=x/2$ is the half-angle argument.
+- $L$ is the requested limit.
+
+## Step 1 - Apply the identity
+
+**Half-angle identity.**
 
 $$
-1-\cos x=2\sin^2\left(\frac{x}{2}\right).
+1-\cos x=2\sin^2\left(\frac x2\right).
 $$
 
-Substitute it into the quotient:
+Because $x^2=4(x/2)^2$,
 
 $$
+\begin{aligned}
 \frac{1-\cos x}{x^2}
-=\frac{2\sin^2(\frac{x}{2})}{x^2}.
+&=\frac{2\sin^2(x/2)}{x^2} \\
+&=\frac12\left(\frac{\sin(x/2)}{x/2}\right)^2.
+\end{aligned}
 $$
 
-### Step 2 — Rewrite using the fundamental limit
+## Step 2 - Apply the fundamental limit
 
-Since $x^2=4(\frac{x}{2})^2$, rearrange the expression as
-
-$$
-\frac{2\sin^2(\frac{x}{2})}{x^2}
-=\frac12\left(\frac{\sin(\frac{x}{2})}{\frac{x}{2}}\right)^2.
-$$
-
-### Step 3 — Take the limit
-
-As $x\to0$, $\frac{x}{2}\to0$, so the fraction in parentheses tends to $1$:
+**Fundamental trigonometric limit.** This limit tests the ratio of $\sin u$ to its angle $u$ for a small angle in radians and will be used to evaluate the remaining factor.
 
 $$
-\lim_{x\to0}\frac12\left(\frac{\sin(\frac{x}{2})}{\frac{x}{2}}\right)^2
-=\frac12(1)^2
-=\frac12.
+\lim_{u\to0}\frac{\sin u}{u}=1.
 $$
 
-## Final Answer
+As $x\to0$, $u=x/2\to0$, so
 
 $$
-\lim_{x\to0}\frac{1-\cos x}{x^2}=\frac12.
+\frac{\sin(x/2)}{x/2}\to1.
 $$
 
-## Key Takeaways
+Therefore
 
-- The half-angle identity converts $1-\cos x$ into a squared sine.
-- Rescaling by $x/2$ reduces the expression to the fundamental trigonometric limit.
+$$
+L=\frac12(1)^2=\frac12.
+$$
+
+## Verification
+
+At $x=0.01$ radians,
+
+$$
+\frac{1-\cos0.01}{0.0001}\approx0.4999958,
+$$
+
+which approaches $1/2$.
+
+## Interpretation
+
+Near zero, $1-\cos x$ is approximately $x^2/2$. Geometrically, this is the quadratic gap below $1$ on the cosine graph.
+
+## Final answer
+
+$$
+\frac12
+$$

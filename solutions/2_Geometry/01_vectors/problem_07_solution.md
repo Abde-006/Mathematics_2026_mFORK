@@ -1,35 +1,59 @@
 ## Exercise 7 — Linear Dependence Without Heavy Computation
 
-### Problem Statement
-Given $u=(1,2,3)$, $v=(2,4,6)$, and $w=(0,1,1)$, identify a relation between $u$ and $v$, decide whether the three vectors can be linearly independent, and explain why no long calculation is needed.
+### Problem statement
 
-### Objective
-Recognize linear dependence by inspecting the vectors for scalar multiples.
+Given
 
-### Concepts and Formulas
-- A set is linearly dependent if a nontrivial combination of its vectors equals zero.
-- One vector being a scalar multiple of another immediately gives such a relation.
-- If a subset is dependent, the entire set is dependent.
+$$
+u=(1,2,3),\qquad v=(2,4,6),\qquad w=(0,1,1)
+$$
 
-### Step-by-Step Solution
+identify a relation between $u$ and $v$, decide whether the three vectors are linearly independent, and explain why no long calculation is needed.
 
-#### Step 1 — Compare $u$ and $v$
+### Formula used
+
+A set of vectors is linearly dependent if there is a nontrivial linear relation
+
+$$
+c_1u+c_2v+c_3w=0
+$$
+
+where at least one coefficient is nonzero.
+
+A vector pair is automatically dependent if one vector is a scalar multiple of the other.
+
+### Solution
+
+Compare $u$ and $v$ coordinate by coordinate:
 
 $$
 2u=2(1,2,3)=(2,4,6)=v
 $$
 
-Equivalently, $v-2u=0$ is a nontrivial relation between the vectors.
+Thus $v$ is twice $u$. The corresponding nontrivial relation is
 
-#### Step 2 — Decide independence of all three
-Since the pair $u,v$ is already dependent, adding $w$ cannot make the full set independent. The same relation $v-2u+0w=0$ still holds.
+$$
+v-2u=0
+$$
 
-### Verification
-The equality $v=2u$ holds in all three coordinates, so it directly certifies dependence without computing a determinant or solving a larger system.
+The coefficient of $u$ is $-2$ and the coefficient of $v$ is $1$, so this is a nontrivial relation.
 
-### Final Answer
-The relation is $v=2u$, or $v-2u=0$. The three vectors are linearly dependent.
+To include $w$, add its coefficient as zero:
 
-### Key Takeaways
-- Check for scalar multiples before using a more involved dependence test.
-- A dependent subset ensures that any larger set containing it is dependent.
+$$
+-2u+1v+0w=0
+$$
+
+Since at least one coefficient is nonzero, the complete set $\{u,v,w\}$ is linearly dependent.
+
+### Explanation
+
+Dependence was visible immediately because $v=2u$. Adding a third vector cannot remove the relation that already exists among $u$ and $v$. Therefore no determinant or linear-system calculation is necessary.
+
+### Final answer
+
+$$
+v=2u,\qquad v-2u=0
+$$
+
+The vectors $u$, $v$, and $w$ are linearly dependent.

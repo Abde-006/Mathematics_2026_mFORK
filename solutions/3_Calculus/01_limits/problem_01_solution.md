@@ -1,43 +1,58 @@
-# Exercise 1 — Dominant Terms in a Sequence
+# Problem 1. Dominant Terms in a Sequence
 
-## Problem Statement
+## Problem statement
 
-Compute the limit and explain why the highest-degree terms determine its value:
+Compute
 
 $$
 \lim_{n\to\infty}\frac{4n^2-3n+1}{2n^2+5n-7}.
 $$
 
-## Step-by-Step Solution
+## Named quantities
 
-### Step 1 — Divide by the highest power of $n$
+- $n$ is a positive integer.
+- $L$ is the requested limit.
 
-The numerator and denominator both have degree $2$. Divide every term by $n^2$:
+## Step 1 - Divide out $n^2$
+
+**Division by the dominant power.** Divide every term in the numerator and denominator by the highest power of $n$ in the denominator. This makes lower-degree terms tend to zero.
+
+The numerator and denominator both have degree $2$, so
 
 $$
+\begin{aligned}
 \frac{4n^2-3n+1}{2n^2+5n-7}
-=\frac{4-\frac3n+\frac1{n^2}}{2+\frac5n-\frac7{n^2}}.
+&=\frac{\frac{4n^2}{n^2}-\frac{3n}{n^2}+\frac1{n^2}}
+        {\frac{2n^2}{n^2}+\frac{5n}{n^2}-\frac7{n^2}} \\
+&=\frac{4-\frac3n+\frac1{n^2}}
+        {2+\frac5n-\frac7{n^2}}.
+\end{aligned}
 $$
 
-### Step 2 — Take the limit of each term
+## Step 2 - Take the limit
 
-As $n\to\infty$, both $\frac1n$ and $\frac1{n^2}$ tend to $0$. The denominator tends to $2$, which is nonzero, so the quotient limit is
-
-$$
-\lim_{n\to\infty}
-\frac{4-\frac3n+\frac1{n^2}}{2+\frac5n-\frac7{n^2}}
-=\frac{4-0+0}{2+0-0}=2.
-$$
-
-The terms of highest degree determine the result because the lower-degree terms become negligible after division by $n^2$.
-
-## Final Answer
+As $n\to\infty$, $1/n\to0$ and $1/n^2\to0$. Therefore
 
 $$
-\lim_{n\to\infty}\frac{4n^2-3n+1}{2n^2+5n-7}=2.
+L=\frac{4-0+0}{2+0-0}=2.
 $$
 
-## Key Takeaways
+## Verification
 
-- For a quotient of polynomials of equal degree, the limit is the ratio of the leading coefficients.
-- Dividing by the highest power makes the vanishing lower-order terms visible.
+At $n=100$,
+
+$$
+\frac{40000-300+1}{20000+500-7}\approx1.9370,
+$$
+
+and at $n=1000$ the quotient is approximately $1.9937$. These values approach $2$.
+
+## Interpretation
+
+For large $n$, terms of degree $2$ determine both growth rates; lower-degree terms become negligible relative to $n^2$.
+
+## Final answer
+
+$$
+2
+$$

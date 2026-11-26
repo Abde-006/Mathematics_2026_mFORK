@@ -1,8 +1,8 @@
-# Exercise 4 — Powers and Oscillation
+# Problem 4. Powers and Oscillation
 
-## Problem Statement
+## Problem statement
 
-For each sequence below, describe its type of behavior and justify your conclusion:
+Analyze
 
 $$
 \left(\frac23\right)^n,\qquad
@@ -11,58 +11,58 @@ $$
 \frac{(-1)^n}{n}.
 $$
 
-## Step-by-Step Solution
+## Named quantities
 
-### Step 1 — Base between $0$ and $1$
+- $r$ is the base of a geometric sequence $r^n$.
+- $a_n$ denotes a term of a generic sequence.
 
-When $0<r<1$, successive powers of $r$ decrease toward $0$. Since $\frac23$ is between $0$ and $1$,
+## Step 1 - Positive bases
 
-$$
-\lim_{n\to\infty}\left(\frac23\right)^n=0.
-$$
+**Geometric sequence behavior.** For $r^n$:
 
-This sequence converges to $0$.
+- $|r|<1$ gives limit $0$;
+- $r>1$ gives limit $+\infty$;
+- $r=-1$ gives alternation between $-1$ and $1$.
 
-### Step 2 — Base greater than $1$
-
-When $r>1$, its positive powers grow without bound. Hence
-
-$$
-\lim_{n\to\infty}\left(\frac32\right)^n=+\infty.
-$$
-
-This sequence diverges to positive infinity.
-
-### Step 3 — Alternating values of fixed size
-
-The sequence $(-1)^n$ alternates between $-1$ and $1$. Its even-indexed terms are $1$, while its odd-indexed terms are $-1$. These subsequences have different limits, so the sequence does not converge.
-
-### Step 4 — Alternating values with shrinking size
-
-The sign still alternates, but the absolute value tends to zero:
+Since $|2/3|<1$,
 
 $$
-\left|\frac{(-1)^n}{n}\right|=\frac1n\longrightarrow0.
+\left(\frac23\right)^n\to0.
 $$
 
-By comparison, the sequence itself tends to zero:
+Since $3/2>1$,
 
 $$
-\lim_{n\to\infty}\frac{(-1)^n}{n}=0.
+\left(\frac32\right)^n\to+\infty.
 $$
 
-The plots show the difference between persistent oscillation and oscillation whose magnitude shrinks:
+## Step 2 - Alternating sequences
 
-![Plots of the four sequences showing decay, unbounded growth, persistent oscillation, and oscillation toward zero](./figures/exercise_04_sequences.svg)
+The sequence $(-1)^n$ is $1,-1,1,-1,\ldots$. Even terms have limit $1$ and odd terms have limit $-1$, so the sequence has no limit.
 
-## Final Answer
+For $(-1)^n/n$, the squeeze bounds are
 
-- $\left(\frac23\right)^n$ converges to $0$.
-- $\left(\frac32\right)^n$ grows without bound.
-- $(-1)^n$ oscillates and does not converge.
-- $\frac{(-1)^n}{n}$ oscillates with decreasing magnitude and converges to $0$.
+$$
+-\frac1n\le\frac{(-1)^n}{n}\le\frac1n.
+$$
 
-## Key Takeaways
+Both bounds tend to $0$, hence
 
-- Oscillation alone does not determine convergence; the size of the terms matters.
-- If the absolute values tend to zero, the terms themselves tend to zero.
+$$
+\frac{(-1)^n}{n}\to0.
+$$
+
+## Verification
+
+The terms $(-1)^n/n$ begin $-1,1/2,-1/3,1/4,\ldots$, and their absolute values $1/n$ tend to zero.
+
+## Interpretation
+
+Oscillation does not always prevent convergence. Alternating signs accompanied by decreasing magnitude can still give limit $0$.
+
+## Final answer
+
+- $\left(\frac23\right)^n\to0$.
+- $\left(\frac32\right)^n\to+\infty$.
+- $(-1)^n$ has no limit.
+- $\frac{(-1)^n}{n}\to0$.

@@ -1,54 +1,109 @@
-## Exercise 13 — Closest Point on a Plane
+# Exercise 13 — Closest Point on a Plane
 
-### Problem Statement
-Find the point on $x+2y+2z=4$ closest to $P=(3,0,0)$. Give the distance and check that the segment joining the points is perpendicular to the plane.
+## Problem Statement
 
-### Objective
-Project a point onto a plane along its normal and determine the resulting minimum distance.
-
-### Concepts and Formulas
-- The normal to $n\cdot x=d$ is $n$.
-- The closest point is the orthogonal projection $H=P-\frac{n\cdot P-d}{\lVert n\rVert^2}n$.
-- The distance is $|n\cdot P-d|/\lVert n\rVert$.
-
-### Step-by-Step Solution
-
-#### Step 1 — Identify the normal and residual
-Here $n=(1,2,2)$, $d=4$, and $\lVert n\rVert^2=1+4+4=9$. For $P=(3,0,0)$,
+Find the point on
 
 $$
-n\cdot P-d=3-4=-1.
+\Pi:x+2y+2z=4
 $$
 
-#### Step 2 — Project onto the plane
-Apply the projection formula:
+closest to $P=(3,0,0)$. Give the distance and check that the segment joining $P$ to the closest point is perpendicular to the plane.
+
+## Lettered Quantities
+
+- Let $P=(p_1,p_2,p_3)=(3,0,0)$.
+- Let $n=(1,2,2)$ be the plane normal.
+- Let $d=4$ be the plane constant.
+- Let $H$ be the closest point.
+
+## Step 1 — Compute the Residual
+
+**Normal residual for closest-point construction.** For $n\cdot X=d$, the signed displacement of $P$ in the normal direction is $(n\cdot P-d)/\lVert n\rVert^2$. It appears in the orthogonal projection formula below. Here
+
+Substitute $P=(3,0,0)$:
 
 $$
-H=P-\frac{-1}{9}n
-=(3,0,0)+\frac19(1,2,2)
-=\left(\frac{28}{9},\frac29,\frac29\right).
+\begin{aligned}
+n\cdot P-d
+&=(1,2,2)\cdot(3,0,0)-4 \\
+&=3-4 \\
+&=-1.
+\end{aligned}
 $$
 
-#### Step 3 — Find the distance
-The distance is
+The squared normal length is
 
 $$
-d(P,\Pi)=\frac{|-1|}{\sqrt9}=\frac13.
+\lVert n\rVert^2=1^2+2^2+2^2=9.
 $$
 
-### Verification
-The candidate lies on the plane:
+## Step 2 — Compute the Closest Point
+
+**Orthogonal projection formula.** The closest point is $H=P-(n\cdot P-d)n/\lVert n\rVert^2$, because subtracting the normal component leaves no perpendicular residual toward the plane. Substitute
+
+Substitute into the projection formula:
 
 $$
+\begin{aligned}
+H
+&=(3,0,0)-\frac{-1}{9}(1,2,2) \\
+&=(3,0,0)+\frac19(1,2,2) \\
+&=\left(3+\frac19,\frac29,\frac29\right) \\
+&=\left(\frac{28}{9},\frac29,\frac29\right).
+\end{aligned}
+$$
+
+## Step 3 — Compute the Distance
+
+**Point-to-plane distance.** The perpendicular distance is $\mathrm{dist}(P,\Pi)=|n\cdot P-d|/\lVert n\rVert$, the length of the normal residual. Use
+
+Since $\lVert n\rVert=\sqrt9=3$,
+
+$$
+$\mathrm{dist}(P,\Pi)=\frac{|-1|}{3}=\frac13$.
+$$
+
+## Verification
+
+Check the point's plane membership:
+
+$$
+\begin{aligned}
 \frac{28}{9}+2\left(\frac29\right)+2\left(\frac29\right)
-=\frac{36}{9}=4.
+&=\frac{28+4+4}{9} \\
+&=\frac{36}{9} \\
+&=4.
+\end{aligned}
 $$
 
-The displacement from $P$ to $H$ is $\frac19(1,2,2)$, a scalar multiple of the plane normal. Hence the segment is perpendicular to the plane, as required for the closest point.
+The displacement from $P$ to $H$ is
 
-### Final Answer
-The closest point is $\left(\frac{28}{9},\frac29,\frac29\right)$, and the distance is $\frac13$.
+$$
+\begin{aligned}
+H-P
+&=\left(\frac{28}{9}-3,\frac29,\frac29\right) \\
+&=\left(\frac19,\frac29,\frac29\right) \\
+&=\frac19(1,2,2).
+\end{aligned}
+$$
 
-### Key Takeaways
-- The shortest path from a point to a plane follows its normal.
-- Projection, plane membership, and distance are all verified by the same normal vector.
+This is a scalar multiple of $n=(1,2,2)$, so the segment is perpendicular to the plane.
+
+## Geometric Interpretation
+
+The normal segment is the shortest route to the plane. Orthogonal projection produces the unique closest point.
+
+## Final Answer
+
+The closest point is
+
+$$
+\left(\frac{28}{9},\frac29,\frac29\right),
+$$
+
+and the distance is
+
+$$
+\frac13.
+$$

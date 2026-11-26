@@ -1,54 +1,68 @@
 ## Exercise 3 — Vector Normalization
 
-### Problem Statement
-For $v=(3,4)$, find a unit vector $e$ with the same direction and orientation. Check its length, reconstruct $v$ as $\|v\|e$, and explain what changes and what remains unchanged during normalization.
+### Problem statement
 
-### Objective
-Separate a vector's direction from its magnitude by constructing a unit vector.
+For $v=(3,4)$, find a unit vector $e$ in the same direction and with the same orientation. Check $\|e\|=1$, reconstruct $v=\|v\|e$, and explain what normalization changes.
 
-### Concepts and Formulas
-- The length of $(x,y)$ is $\sqrt{x^2+y^2}$.
-- For a nonzero vector, the unit vector in its direction is $e=v/\|v\|$.
-- Normalization changes the length to one but preserves direction and orientation.
+### Formula used
 
-### Step-by-Step Solution
+For a nonzero vector $v$, a unit vector in the same direction is
 
-#### Step 1 — Find the magnitude of $v$
+$$
+e=\frac{v}{\|v\|}
+$$
+
+The length formula in $\mathbb R^2$ is
+
+$$
+\|(x,y)\|=\sqrt{x^2+y^2}
+$$
+
+Dividing by $\|v\|$ changes the magnitude to $1$ while preserving the ratios of the coordinates, and therefore preserves direction and orientation.
+
+### Solution
+
+Calculate the length of $v$:
 
 $$
 \|v\|=\sqrt{3^2+4^2}=\sqrt{25}=5
 $$
 
-#### Step 2 — Divide by the magnitude
+Divide each coordinate by $5$:
 
 $$
-e=\frac{v}{\|v\|}=\left(\frac{3}{5},\frac{4}{5}\right)
+e=\frac{(3,4)}{5}
+=\left(\frac{3}{5},\frac{4}{5}\right)
 $$
 
-#### Step 3 — Verify that $e$ is a unit vector
+Check the unit length:
 
 $$
-\|e\|=\sqrt{\left(\frac{3}{5}\right)^2+\left(\frac{4}{5}\right)^2}
-=\sqrt{\frac{9}{25}+\frac{16}{25}}=1
+\|e\|
+=\sqrt{\left(\frac{3}{5}\right)^2+\left(\frac{4}{5}\right)^2}
+=\sqrt{\frac{9}{25}+\frac{16}{25}}
+=1
 $$
 
-#### Step 4 — Reconstruct the original vector
+Reconstruct $v$:
 
 $$
-\|v\|e=5\left(\frac{3}{5},\frac{4}{5}\right)=(3,4)=v
+\|v\|e
+=5\left(\frac{3}{5},\frac{4}{5}\right)
+=(3,4)
+=v
 $$
 
-### Verification
-The calculated unit vector has length one, and multiplying it by the original length recovers both coordinates of $v$.
+### Interpretation
 
-### Final Answer
+Normalization removes the magnitude while keeping the direction. Multiplication by $\|v\|=5$ restores the original length. The vector becomes $v=5e$, where $e$ describes only direction and $5$ describes magnitude.
+
+### Final answer
 
 $$
-e=\left(\frac{3}{5},\frac{4}{5}\right),\qquad \|v\|=5,\qquad v=5e
+e=\left(\frac{3}{5},\frac{4}{5}\right)
 $$
 
-Normalization changes the length from $5$ to $1$, while the direction and orientation stay the same.
-
-### Key Takeaways
-- Dividing a nonzero vector by its length produces a unit vector.
-- A vector can be represented as its magnitude times its unit direction.
+$$
+\|e\|=1,\qquad v=5e
+$$
